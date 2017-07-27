@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 using MENSAJES;
 using NEGOCIO;
 
@@ -37,6 +38,11 @@ namespace ProyectoParcial2
         {
             MedicamentoNegocio agregarbox = new MedicamentoNegocio();
             agregarbox.cargarDatosBox(cmbTipo);
+        }
+
+        internal static void CargarTablaPacientes(DataGridView dataGridPacientes)
+        {
+            throw new NotImplementedException();
         }
 
         internal static void SoloLetras(KeyPressEventArgs e)
