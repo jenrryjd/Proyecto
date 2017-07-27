@@ -44,5 +44,20 @@ namespace ProyectoParcial2
             var resultado = PersonaTestNegocio.GuardarPacienteMensaje(pac);
 
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            txtCedula.Text="";
+             txtNombre.Text="";
+             txtApellido.Text="";
+            txtTelefono.Text="";
+            txtCelular.Text="";
+            txtDireccion.Text="";
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

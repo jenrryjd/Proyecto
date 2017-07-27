@@ -72,6 +72,28 @@ namespace ProyectoParcial2
 
 
             var resultado = PersonaTestNegocio.GuardarMedicoMensaje(med);
+            MessageBox.Show("Se a insertado con exito","INFORMACION");
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+             txtCedula.Text="";
+             txtNombre.Text="";
+             txtApellidos.Text="";
+         
+            comboCivil.Text="";
+             txtTelefono.Text="";
+             txtCelular.Text="";
+             txtDireccion.Text="";
+             txtLicen.Text="";
+             comboEspe.Text="";
+
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

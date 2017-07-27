@@ -5,8 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MENSAJES;
 using DAL;
-using DevExpress.XtraEditors;
-
+using System.Data;
 namespace NEGOCIO
 {
     public class EspecialidadNegocio
@@ -18,9 +17,35 @@ namespace NEGOCIO
             return ms;
         }
 
-        public void cargarDatosBoxEspecialidad(ComboBoxEdit cmbEspecialidad)
+        public static object EliminarEspecialidad(EspecialidadMensaje especialidadEliminar)
         {
-            EspecialidadDAL.CargarEspecialidadBox(cmbEspecialidad);
+            EspecialidadMensaje ms = new EspecialidadMensaje();
+            ms = EspecialidadDAL.EliminarEspecialidad(especialidadEliminar);
+            return ms;
+        }
+
+
+
+        public static object ActualizarEspecialidad(EspecialidadMensaje especialidadActualizar)
+        {
+            EspecialidadMensaje ms = new EspecialidadMensaje();
+            ms = EspecialidadDAL.ActualizarEspecialidad(especialidadActualizar);
+            return ms;
+        }
+
+        public DataSet DevolverListaEspecialidad()
+        {
+            return Alergias.CargarListaDatos(EspecialidadesBuscar.DevuelveListaEspecialidaesCompleta());
+        }
+
+        public DataSet DevolverListaEspeEspecificacion(string nombre)
+        {
+            return Alergias.CargarListaDatos(EspecialidadesBuscar.DevuelveListaEspecialidadNombre(nombre));
+        }
+
+        public DataSet DevolverListaEspeCodigo(string codigo)
+        {
+            return Alergias.CargarListaDatos(EspecialidadesBuscar.DevuelveListaEspecialidadCodigo(codigo));
         }
     }
 }

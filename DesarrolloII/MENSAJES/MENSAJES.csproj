@@ -45,11 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlergiaMensajes.cs" />
-    <Compile Include="CitaMensajes.cs" />
     <Compile Include="Class1.cs" />
-    <Compile Include="EnfermedadesMensajes.cs" />
     <Compile Include="EspecialidadMensaje.cs" />
-    <Compile Include="MedicamentosMensaje.cs" />
     <Compile Include="MedicoMensaje.cs" />
     <Compile Include="PacienteMensaje.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

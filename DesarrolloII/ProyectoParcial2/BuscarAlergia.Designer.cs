@@ -41,12 +41,12 @@
             // 
             // txtRazonBuscar
             // 
-            this.txtRazonBuscar.Enabled = false;
             this.txtRazonBuscar.Location = new System.Drawing.Point(105, 75);
             this.txtRazonBuscar.Name = "txtRazonBuscar";
             this.txtRazonBuscar.Size = new System.Drawing.Size(127, 20);
             this.txtRazonBuscar.TabIndex = 25;
-            this.txtRazonBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRazonBuscar_KeyPress_1);
+            this.txtRazonBuscar.EditValueChanged += new System.EventHandler(this.txtRazonBuscar_EditValueChanged);
+            this.txtRazonBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRazonBuscar_KeyPress);
             // 
             // cmbRazonSocial
             // 

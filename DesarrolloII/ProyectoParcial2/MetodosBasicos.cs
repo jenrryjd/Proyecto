@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 using MENSAJES;
 using NEGOCIO;
 
@@ -18,40 +17,20 @@ namespace ProyectoParcial2
             AlergiaNegocio datosTablaAlergias = new AlergiaNegocio();
             var listaAlergias = datosTablaAlergias.DevolverListaAlergias().Tables[0];
             tabla.DataSource = listaAlergias;
-            
         }
 
         internal static void CargarTablaEnfermedades(DataGridView tabla)
         {
-            EnfermedadNegocio datosTablaEnfermedades = new EnfermedadNegocio();
-            var listaEnfermedad = datosTablaEnfermedades.DevolverListaEnfermedad().Tables[0];
-            tabla.DataSource = listaEnfermedad;
-
+            PersonaTestNegocio perso = new PersonaTestNegocio();
+            var listaPesonas = perso.DevolverListaPaciente().Tables[0];
+            tabla.DataSource = listaPesonas;
         }
 
-        internal static void CargarBoxEspecialidad(ComboBoxEdit cmbEspecialidad)
+        internal static void CargarTablaMedico(DataGridView tabla)
         {
-            EspecialidadNegocio agregarbox = new EspecialidadNegocio();
-            agregarbox.cargarDatosBoxEspecialidad(cmbEspecialidad);
-        }
-
-        internal static void CargarBox(ComboBoxEdit cmbTipo)
-        {
-            EnfermedadNegocio agregarbox = new EnfermedadNegocio();
-            agregarbox.cargarDatosBox(cmbTipo);
-        }
-
-        internal static void CargarTablaMedicamentos(DataGridView dataGridMedicamento)
-        {
-            MedicamentoNegocio datosTablaMedicamentos = new MedicamentoNegocio();
-            var listaEnfermedad = datosTablaMedicamentos.DevolverListaMedicamentos().Tables[0];
-            dataGridMedicamento.DataSource = listaEnfermedad;
-        }
-
-        internal static void CargarBoxAler(ComboBoxEdit cmbTipo)
-        {
-            AlergiaNegocio agregarbox = new AlergiaNegocio();
-            agregarbox.cargarDatosBox(cmbTipo);
+            PersonaTestNegocio perso = new PersonaTestNegocio();
+            var listaPesonas = perso.DevolverListaMedico().Tables[0];
+            tabla.DataSource = listaPesonas;
         }
 
         internal static void CargarBoxMedi(ComboBoxEdit cmbTipo)

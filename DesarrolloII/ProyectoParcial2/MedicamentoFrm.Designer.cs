@@ -83,7 +83,7 @@
             // btnCancelarEliminar
             // 
             this.btnCancelarEliminar.Image = global::ProyectoParcial2.Properties.Resources.cancelar;
-            this.btnCancelarEliminar.Location = new System.Drawing.Point(225, 435);
+            this.btnCancelarEliminar.Location = new System.Drawing.Point(225, 390);
             this.btnCancelarEliminar.Name = "btnCancelarEliminar";
             this.btnCancelarEliminar.Size = new System.Drawing.Size(105, 45);
             this.btnCancelarEliminar.TabIndex = 73;
@@ -94,7 +94,7 @@
             // dataGridMedicamentoEliminar
             // 
             this.dataGridMedicamentoEliminar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridMedicamentoEliminar.Location = new System.Drawing.Point(15, 240);
+            this.dataGridMedicamentoEliminar.Location = new System.Drawing.Point(15, 225);
             this.dataGridMedicamentoEliminar.Name = "dataGridMedicamentoEliminar";
             this.dataGridMedicamentoEliminar.Size = new System.Drawing.Size(525, 180);
             this.dataGridMedicamentoEliminar.TabIndex = 72;
@@ -104,7 +104,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Image = global::ProyectoParcial2.Properties.Resources.if_Artboard_1_1790656;
-            this.btnEliminar.Location = new System.Drawing.Point(90, 435);
+            this.btnEliminar.Location = new System.Drawing.Point(0, 435);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(105, 45);
             this.btnEliminar.TabIndex = 71;
@@ -115,7 +115,7 @@
             // btnCancelarActualizacion
             // 
             this.btnCancelarActualizacion.Image = global::ProyectoParcial2.Properties.Resources.cancelar;
-            this.btnCancelarActualizacion.Location = new System.Drawing.Point(225, 435);
+            this.btnCancelarActualizacion.Location = new System.Drawing.Point(330, 405);
             this.btnCancelarActualizacion.Name = "btnCancelarActualizacion";
             this.btnCancelarActualizacion.Size = new System.Drawing.Size(105, 45);
             this.btnCancelarActualizacion.TabIndex = 70;
@@ -134,7 +134,7 @@
             // btnActualizar
             // 
             this.btnActualizar.Image = global::ProyectoParcial2.Properties.Resources.if_82Add_create_new_cross_medical_plus_1886149;
-            this.btnActualizar.Location = new System.Drawing.Point(90, 435);
+            this.btnActualizar.Location = new System.Drawing.Point(90, 390);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(105, 45);
             this.btnActualizar.TabIndex = 62;
@@ -264,7 +264,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(558, 508);
+            this.ClientSize = new System.Drawing.Size(731, 508);
             this.Controls.Add(this.lblTipoNuevo);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.btnCancelarEliminar);
@@ -286,7 +286,6 @@
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.txtDescripcion);
             this.Name = "MedicamentoFrm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MedicamentoFrm";
             this.Load += new System.EventHandler(this.MedicamentoFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtBuscar.Properties)).EndInit();

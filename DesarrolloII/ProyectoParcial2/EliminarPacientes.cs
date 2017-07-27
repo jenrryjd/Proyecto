@@ -24,7 +24,7 @@ namespace ProyectoParcial2
             PacienteMensaje pac = new PacienteMensaje();
             pac.Cedula = labelEliminarPaci.Text;
             PersonaTestNegocio.EliminarrPaciente(pac);
-            
+            MessageBox.Show("Se a eliminado con exito");
         }
 
         private void dataGridPacientes_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -66,6 +66,22 @@ namespace ProyectoParcial2
                 PersonaTestNegocio obj = new PersonaTestNegocio();
                 var lista = obj.DevolverListaPacienteApellido(textBuscar.Text);
                 dataGridPacientes.DataSource = lista.Tables[0];
+            }
+        }
+
+        private void cmbEliminarPac_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbEliminarPac. SelectedItem.Equals("Cedula"))
+            {
+                lblTituloBusqueda.Text = "Cedula";
+            }
+            else if (cmbEliminarPac.SelectedItem.Equals("Nombre"))
+            {
+                lblTituloBusqueda.Text = "Nombre";
+            }
+            else if (cmbEliminarPac .SelectedItem.Equals("Apellido"))
+            {
+                lblTituloBusqueda.Text = "Apellido";
             }
         }
     }

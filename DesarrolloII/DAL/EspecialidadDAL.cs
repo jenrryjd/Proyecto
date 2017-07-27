@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 using MENSAJES;
 using System.Transactions;
 using System.Data.SqlClient;
-using DevExpress.XtraEditors;
-
 namespace DAL
 {
     public class EspecialidadDAL
@@ -36,25 +34,51 @@ namespace DAL
             }
         }
 
-
-        public static void CargarEspecialidadBox(ComboBoxEdit cmbTipo)
+        public static EspecialidadMensaje ActualizarEspecialidad(EspecialidadMensaje especActualizar)
         {
             using (TransactionScope scope = new TransactionScope())
             {
                 using (SqlConnection connection = new SqlConnection(ConexionClinica.Default.Conexion))
                 {
                     connection.Open();
-                    string queryString = "SELECT [NOM_ESPECIALIDAD] FROM[dbo].[ESPECIALIDAD]";
+                    string queryString = "UPDATE [Clinica].[dbo].[ESPECILIDAD] SET " +
+                        "[ID_ESPECIALIDAD] = @id," +
+                        "[NOMBRE_ESPECIALIDAD]=@apellido," +
+                        "WHERE [CED_DOC]=@id;";
                     SqlCommand cmd = new SqlCommand(queryString, connection);
-                    var dr = cmd.ExecuteReader();
-                    while (dr.Read())
-                    {
-                        cmbTipo.Properties.Items.Add(dr["NOM_ESPECIALIDAD"].ToString());
-                    }
-                    dr.Close();
+                    cmd.Parameters.AddWithValue("@id", especActualizar.CodigoEsp);
+                    cmd.Parameters.AddWithValue("@nombre", especActualizar.NomEsp);
+                    
+                    cmd.ExecuteScalar();
+                    // alergiaActualizar.Id = Convert.ToInt32(IdAlergia);
+
+                    connection.Close();
+                    scope.Complete();
+                    return especActualizar;
                 }
             }
         }
 
+        public static EspecialidadMensaje EliminarEspecialidad(EspecialidadMensaje especialidadElimnar)
+        {
+            using (TransactionScope scope = new TransactionScope())
+            {
+                using (SqlConnection connection = new SqlConnection(ConexionClinica.Default.Conexion))
+                {
+                    connection.Open();
+                    string queryString = "DELETE[Clinica].[dbo].[ESPECILIDAD]" +
+                        "WHERE [CED_DOC]=@id;";
+                    SqlCommand cmd = new SqlCommand(queryString, connection);
+                    cmd.Parameters.AddWithValue("@id", especialidadElimnar.CodigoEsp);
+                    
+                    cmd.ExecuteScalar();
+                    // alergiaActualizar.Id = Convert.ToInt32(IdAlergia);
+
+                    connection.Close();
+                    scope.Complete();
+                    return especialidadElimnar;
+                }
+            }
+        }
     }
 }

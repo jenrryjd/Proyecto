@@ -1,6 +1,6 @@
 ﻿namespace ProyectoParcial2
 {
-    partial class EliminarPacientes
+    partial class EliminarMedico
     {
         /// <summary>
         /// Required designer variable.
@@ -29,113 +29,111 @@
         private void InitializeComponent()
         {
             this.textBuscar = new DevExpress.XtraEditors.TextEdit();
-            this.btnEliminarMed = new DevExpress.XtraEditors.SimpleButton();
-            this.cmbEliminarPac = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.btnEliminarModMed = new DevExpress.XtraEditors.SimpleButton();
+            this.comboBuscar = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label2 = new System.Windows.Forms.Label();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.dataGridPacientes = new System.Windows.Forms.DataGridView();
             this.lblTituloBusqueda = new System.Windows.Forms.Label();
-            this.labelEliminarPaci = new System.Windows.Forms.Label();
+            this.lblPce = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.textBuscar.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbEliminarPac.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBuscar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPacientes)).BeginInit();
             this.SuspendLayout();
             // 
             // textBuscar
             // 
-            this.textBuscar.Location = new System.Drawing.Point(157, 98);
+            this.textBuscar.Location = new System.Drawing.Point(109, 82);
             this.textBuscar.Name = "textBuscar";
-            this.textBuscar.Size = new System.Drawing.Size(162, 20);
-            this.textBuscar.TabIndex = 26;
-            this.textBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBuscar_KeyPress);
+            this.textBuscar.Size = new System.Drawing.Size(127, 20);
+            this.textBuscar.TabIndex = 19;
+            this.textBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textEdit1_KeyPress);
             // 
-            // btnEliminarMed
+            // btnEliminarModMed
             // 
-            this.btnEliminarMed.Location = new System.Drawing.Point(123, 368);
-            this.btnEliminarMed.Name = "btnEliminarMed";
-            this.btnEliminarMed.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminarMed.TabIndex = 25;
-            this.btnEliminarMed.Text = "Eliminar";
-            this.btnEliminarMed.Click += new System.EventHandler(this.btnEliminarMed_Click);
+            this.btnEliminarModMed.Location = new System.Drawing.Point(69, 353);
+            this.btnEliminarModMed.Name = "btnEliminarModMed";
+            this.btnEliminarModMed.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarModMed.TabIndex = 18;
+            this.btnEliminarModMed.Text = "Eliminar";
+            this.btnEliminarModMed.Click += new System.EventHandler(this.btnEliminarModMed_Click);
             // 
-            // cmbEliminarPac
+            // comboBuscar
             // 
-            this.cmbEliminarPac.Location = new System.Drawing.Point(157, 54);
-            this.cmbEliminarPac.Name = "cmbEliminarPac";
-            this.cmbEliminarPac.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.comboBuscar.Location = new System.Drawing.Point(109, 38);
+            this.comboBuscar.Name = "comboBuscar";
+            this.comboBuscar.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbEliminarPac.Properties.Items.AddRange(new object[] {
+            this.comboBuscar.Properties.Items.AddRange(new object[] {
             "Cedula",
-            "Nombre\t",
+            "Nombre",
             "Apellido"});
-            this.cmbEliminarPac.Size = new System.Drawing.Size(162, 20);
-            this.cmbEliminarPac.TabIndex = 24;
-            this.cmbEliminarPac.SelectedIndexChanged += new System.EventHandler(this.cmbEliminarPac_SelectedIndexChanged);
+            this.comboBuscar.Size = new System.Drawing.Size(127, 20);
+            this.comboBuscar.TabIndex = 17;
+            this.comboBuscar.SelectedIndexChanged += new System.EventHandler(this.comboBuscar_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(84, 61);
+            this.label2.Location = new System.Drawing.Point(36, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 13);
-            this.label2.TabIndex = 23;
+            this.label2.TabIndex = 16;
             this.label2.Text = "Buscar Por:";
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(487, 369);
+            this.simpleButton2.Location = new System.Drawing.Point(413, 353);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton2.TabIndex = 22;
+            this.simpleButton2.TabIndex = 15;
             this.simpleButton2.Text = "Salir";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // dataGridPacientes
             // 
             this.dataGridPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridPacientes.Location = new System.Drawing.Point(53, 151);
+            this.dataGridPacientes.Location = new System.Drawing.Point(5, 135);
             this.dataGridPacientes.Name = "dataGridPacientes";
             this.dataGridPacientes.Size = new System.Drawing.Size(520, 193);
-            this.dataGridPacientes.TabIndex = 21;
+            this.dataGridPacientes.TabIndex = 14;
             this.dataGridPacientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridPacientes_CellClick);
-            this.dataGridPacientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridPacientes_CellContentClick);
             // 
             // lblTituloBusqueda
             // 
             this.lblTituloBusqueda.AutoSize = true;
-            this.lblTituloBusqueda.Location = new System.Drawing.Point(84, 101);
+            this.lblTituloBusqueda.Location = new System.Drawing.Point(36, 85);
             this.lblTituloBusqueda.Name = "lblTituloBusqueda";
             this.lblTituloBusqueda.Size = new System.Drawing.Size(43, 13);
-            this.lblTituloBusqueda.TabIndex = 20;
+            this.lblTituloBusqueda.TabIndex = 13;
             this.lblTituloBusqueda.Text = "Cedula:";
             // 
-            // labelEliminarPaci
+            // lblPce
             // 
-            this.labelEliminarPaci.AutoSize = true;
-            this.labelEliminarPaci.Location = new System.Drawing.Point(437, 101);
-            this.labelEliminarPaci.Name = "labelEliminarPaci";
-            this.labelEliminarPaci.Size = new System.Drawing.Size(35, 13);
-            this.labelEliminarPaci.TabIndex = 27;
-            this.labelEliminarPaci.Text = "label1";
+            this.lblPce.AutoSize = true;
+            this.lblPce.Location = new System.Drawing.Point(303, 76);
+            this.lblPce.Name = "lblPce";
+            this.lblPce.Size = new System.Drawing.Size(0, 13);
+            this.lblPce.TabIndex = 20;
             // 
-            // EliminarPacientes
+            // EliminarMedico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(626, 446);
-            this.Controls.Add(this.labelEliminarPaci);
+            this.ClientSize = new System.Drawing.Size(531, 415);
+            this.Controls.Add(this.lblPce);
             this.Controls.Add(this.textBuscar);
-            this.Controls.Add(this.btnEliminarMed);
-            this.Controls.Add(this.cmbEliminarPac);
+            this.Controls.Add(this.btnEliminarModMed);
+            this.Controls.Add(this.comboBuscar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.dataGridPacientes);
             this.Controls.Add(this.lblTituloBusqueda);
-            this.Name = "EliminarPacientes";
-            this.Text = "EliminarPacientes";
-            this.Load += new System.EventHandler(this.EliminarPacientes_Load);
+            this.Name = "EliminarMedico";
+            this.Text = "EliminarMedico";
+            this.Load += new System.EventHandler(this.EliminarMedico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.textBuscar.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbEliminarPac.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBuscar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPacientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -145,12 +143,12 @@
         #endregion
 
         private DevExpress.XtraEditors.TextEdit textBuscar;
-        public DevExpress.XtraEditors.SimpleButton btnEliminarMed;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbEliminarPac;
+        public DevExpress.XtraEditors.SimpleButton btnEliminarModMed;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBuscar;
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private System.Windows.Forms.DataGridView dataGridPacientes;
         private System.Windows.Forms.Label lblTituloBusqueda;
-        private System.Windows.Forms.Label labelEliminarPaci;
+        private System.Windows.Forms.Label lblPce;
     }
 }

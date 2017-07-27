@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MENSAJES;
 using DAL;
-using DevExpress.XtraEditors;
+using System.Data;
 
 namespace NEGOCIO
 {
@@ -25,15 +25,82 @@ namespace NEGOCIO
             return md;
         }
 
-        public object DevolverNombrePaciente(string text)
+        public static object ActualizarPaciente(PacienteMensaje pacienteActualizar)
         {
-            string ms = PersonaTestDAL.ConsultaNombre(text);
+            PacienteMensaje ms = new PacienteMensaje();
+            ms = PersonaTestDAL.ActualizarPaciente(pacienteActualizar);
             return ms;
         }
 
-        public void CargarDoctores(string especialidad, TextEdit txtCedDoc, TextEdit txtNomDoc)
+        public static object EliminarrPaciente(PacienteMensaje pacienteEliminar)
         {
-            PersonaTestDAL.CargaDoctores(especialidad, txtCedDoc, txtNomDoc);
+            PacienteMensaje ms = new PacienteMensaje();
+            ms = PersonaTestDAL.Eliminar(pacienteEliminar);
+            return ms;
         }
+
+   
+
+        public static object ActualizarMedico(MedicoMensaje medicoActualizar)
+        {
+            MedicoMensaje ms = new MedicoMensaje();
+            ms = PersonaTestDAL.ActualizarMedico(medicoActualizar);
+            return ms;
+        }
+
+        public static object EliminarMedico(MedicoMensaje medicoEliminar)
+        {
+            MedicoMensaje ms = new MedicoMensaje();
+            ms = PersonaTestDAL.EliminarMedico(medicoEliminar);
+            return ms;
+        }
+
+        public DataSet DevolverListaMedico()
+        {
+            return Alergias.CargarListaDatos(MedicoBuscar.DevuelveListaMedicosCompleta());
+        }
+
+        public DataSet DevolverListaCedulaMed(string cedula)
+        {
+            return Alergias.CargarListaDatos(MedicoBuscar.DevuelveListaPorCedula(cedula));
+        }
+
+        public DataSet DevolverListaMedNombre(string nombre)
+        {
+            return Alergias.CargarListaDatos(MedicoBuscar.DevuelveListaPorNombre(nombre));
+        }
+
+        public DataSet DevolverListaMedApellido(string apellido)
+        {
+            return Alergias.CargarListaDatos(MedicoBuscar.DevuelveListaPorApellido(apellido));
+        }
+
+
+
+
+
+
+
+        public DataSet DevolverListaPaciente()
+        {
+            return Alergias.CargarListaDatos(PacienteBuscar.DevuelveListaPacientesCompleta());
+        }
+
+        public DataSet DevolverListaCedula(string cedula)
+        {
+            return Alergias.CargarListaDatos(PacienteBuscar.DevuelveListaPorCedula(cedula));
+        }
+
+        public DataSet DevolverListaPacienteNombre(string nombre)
+        {
+            return Alergias.CargarListaDatos(PacienteBuscar.DevuelveListaPorNombre(nombre));
+        }
+
+        public DataSet DevolverListaPacienteApellido(string apellido)
+        {
+            return Alergias.CargarListaDatos(PacienteBuscar.DevuelveListaPorApellido(apellido));
+        }
+
+     
     }
 }
