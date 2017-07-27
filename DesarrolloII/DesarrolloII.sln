@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoParcial2", "ProyectoParcial2\ProyectoParcial2.csproj", "{2F849993-AF6B-42A3-A456-8AF24D892267}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{BD22AB3C-6B34-4E42-833F-5364F3561084}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NEGOCIO", "NEGOCIO\NEGOCIO.csproj", "{671A7BE0-A30B-4436-B0B6-BE9A4E2F964F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MENSAJES", "MENSAJES\MENSAJES.csproj", "{374BD3AE-4F3A-47EC-94E6-5E0401E88022}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F849993-AF6B-42A3-A456-8AF24D892267}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F849993-AF6B-42A3-A456-8AF24D892267}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F849993-AF6B-42A3-A456-8AF24D892267}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F849993-AF6B-42A3-A456-8AF24D892267}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD22AB3C-6B34-4E42-833F-5364F3561084}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD22AB3C-6B34-4E42-833F-5364F3561084}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD22AB3C-6B34-4E42-833F-5364F3561084}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD22AB3C-6B34-4E42-833F-5364F3561084}.Release|Any CPU.Build.0 = Release|Any CPU
+		{671A7BE0-A30B-4436-B0B6-BE9A4E2F964F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{671A7BE0-A30B-4436-B0B6-BE9A4E2F964F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{671A7BE0-A30B-4436-B0B6-BE9A4E2F964F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{671A7BE0-A30B-4436-B0B6-BE9A4E2F964F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{374BD3AE-4F3A-47EC-94E6-5E0401E88022}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{374BD3AE-4F3A-47EC-94E6-5E0401E88022}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{374BD3AE-4F3A-47EC-94E6-5E0401E88022}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{374BD3AE-4F3A-47EC-94E6-5E0401E88022}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://jenrryjd.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DAL\\DAL.csproj
+		SccProjectName1 = DAL
+		SccLocalPath1 = DAL
+		SccProjectUniqueName2 = MENSAJES\\MENSAJES.csproj
+		SccProjectName2 = MENSAJES
+		SccLocalPath2 = MENSAJES
+		SccProjectUniqueName3 = NEGOCIO\\NEGOCIO.csproj
+		SccProjectName3 = NEGOCIO
+		SccLocalPath3 = NEGOCIO
+		SccProjectUniqueName4 = ProyectoParcial2\\ProyectoParcial2.csproj
+		SccProjectName4 = ProyectoParcial2
+		SccLocalPath4 = ProyectoParcial2
+	EndGlobalSection
+EndGlobal

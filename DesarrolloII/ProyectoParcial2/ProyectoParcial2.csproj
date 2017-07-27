@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F849993-AF6B-42A3-A456-8AF24D892267}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProyectoParcial2</RootNamespace>
+    <AssemblyName>ProyectoParcial2</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.ExpressApp.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.ExpressApp.Xpo.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Persistent.Base.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v15.1.Extensions, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgendarCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgendarCita.Designer.cs">
+      <DependentUpon>AgendarCita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlergiasFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlergiasFrm.Designer.cs">
+      <DependentUpon>AlergiasFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarAlergia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarAlergia.Designer.cs">
+      <DependentUpon>BuscarAlergia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarCitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarCitas.Designer.cs">
+      <DependentUpon>BuscarCitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarEnfermedades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarEnfermedades.Designer.cs">
+      <DependentUpon>BuscarEnfermedades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarMedicamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarMedicamento.Designer.cs">
+      <DependentUpon>BuscarMedicamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarCita.Designer.cs">
+      <DependentUpon>EliminarCita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnfermedadesFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnfermedadesFrm.Designer.cs">
+      <DependentUpon>EnfermedadesFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Especialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Especialidad.Designer.cs">
+      <DependentUpon>Especialidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedicamentoFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicamentoFrm.Designer.cs">
+      <DependentUpon>MedicamentoFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medicos.Designer.cs">
+      <DependentUpon>Medicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetodosBasicos.cs" />
+    <Compile Include="ModificarMedicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarMedicos.Designer.cs">
+      <DependentUpon>ModificarMedicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarPacientes.Designer.cs">
+      <DependentUpon>ModificarPacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParaModificarMedicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParaModificarMedicos.Designer.cs">
+      <DependentUpon>ParaModificarMedicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParaModificarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParaModificarPaciente.Designer.cs">
+      <DependentUpon>ParaModificarPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroPacientes.Designer.cs">
+      <DependentUpon>RegistroPacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AgendarCita.resx">
+      <DependentUpon>AgendarCita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlergiasFrm.resx">
+      <DependentUpon>AlergiasFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarAlergia.resx">
+      <DependentUpon>BuscarAlergia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarCitas.resx">
+      <DependentUpon>BuscarCitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarEnfermedades.resx">
+      <DependentUpon>BuscarEnfermedades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarMedicamento.resx">
+      <DependentUpon>BuscarMedicamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarCita.resx">
+      <DependentUpon>EliminarCita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnfermedadesFrm.resx">
+      <DependentUpon>EnfermedadesFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Especialidad.resx">
+      <DependentUpon>Especialidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicamentoFrm.resx">
+      <DependentUpon>MedicamentoFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medicos.resx">
+      <DependentUpon>Medicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarMedicos.resx">
+      <DependentUpon>ModificarMedicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarPacientes.resx">
+      <DependentUpon>ModificarPacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParaModificarMedicos.resx">
+      <DependentUpon>ParaModificarMedicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParaModificarPaciente.resx">
+      <DependentUpon>ParaModificarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RegistroPacientes.resx">
+      <DependentUpon>RegistroPacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconGeneral.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_General.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1498182911_pharmacy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_RegPac.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1499379496_PatientFile.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1499379476_PatientFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1499380386_schedule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_user_profile_edit_103781.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Block_delete_person_remove_user_1886501 %281%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_BT_line_remove_905647.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Streamline-22_185042.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_medical_icon_3_1290986.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_medical_icon_1_1290990.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_user %281%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Artboard_1_1790656.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Facebook_UI-41_2344319.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_icon-42-note-add_315164.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_EditDocument_728933.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_82Add_create_new_cross_medical_plus_1886149.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Compose_1891025.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Artboard_1_17906561.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Change_edit_options_pencil_settings_tools_write_1886543.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_plus_1646001.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_plus_1282963.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_pencil_1287517.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MENSAJES\MENSAJES.csproj">
+      <Project>{374bd3ae-4f3a-47ec-94e6-5e0401e88022}</Project>
+      <Name>MENSAJES</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NEGOCIO\NEGOCIO.csproj">
+      <Project>{671a7be0-a30b-4436-b0b6-be9a4e2f964f}</Project>
+      <Name>NEGOCIO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closejd.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closejd1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
