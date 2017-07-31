@@ -55,8 +55,7 @@
     <Reference Include="DevExpress.XtraReports.v15.1.Extensions, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraScheduler.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -89,10 +88,11 @@
     <Compile Include="AlergiasFrm.Designer.cs">
       <DependentUpon>AlergiasFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Asistidas.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Asistidas.xsd</DependentUpon>
+    <Compile Include="AtencionTratamientoFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AtencionTratamientoFrm.Designer.cs">
+      <DependentUpon>AtencionTratamientoFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="BuscarAlergia.cs">
       <SubType>Form</SubType>
@@ -118,10 +118,11 @@
     <Compile Include="BuscarMedicamento.Designer.cs">
       <DependentUpon>BuscarMedicamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="CitaFecha.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CitaFecha.xsd</DependentUpon>
+    <Compile Include="CitasAsignadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CitasAsignadas.Designer.cs">
+      <DependentUpon>CitasAsignadas.cs</DependentUpon>
     </Compile>
     <Compile Include="EliminarCita.cs">
       <SubType>Form</SubType>
@@ -172,17 +173,17 @@
     <Compile Include="ModificarPacientes.Designer.cs">
       <DependentUpon>ModificarPacientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="PMMedicos.cs">
+    <Compile Include="ParaModificarMedicos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PMMedicos.Designer.cs">
-      <DependentUpon>PMMedicos.cs</DependentUpon>
+    <Compile Include="ParaModificarMedicos.Designer.cs">
+      <DependentUpon>ParaModificarMedicos.cs</DependentUpon>
     </Compile>
-    <Compile Include="PMPacientes.cs">
+    <Compile Include="ParaModificarPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PMPacientes.Designer.cs">
-      <DependentUpon>PMPacientes.cs</DependentUpon>
+    <Compile Include="ParaModificarPaciente.Designer.cs">
+      <DependentUpon>ParaModificarPaciente.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistroPacientes.cs">
       <SubType>Form</SubType>
@@ -198,29 +199,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReporteCitaFecha.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReporteCitaFecha.Designer.cs">
-      <DependentUpon>ReporteCitaFecha.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ReportesEstado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReportesEstado.Designer.cs">
-      <DependentUpon>ReportesEstado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SignoVitalnter.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SignoVitalnter.Designer.cs">
-      <DependentUpon>SignoVitalnter.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="AgendarCita.resx">
       <DependentUpon>AgendarCita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AlergiasFrm.resx">
       <DependentUpon>AlergiasFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AtencionTratamientoFrm.resx">
+      <DependentUpon>AtencionTratamientoFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BuscarAlergia.resx">
       <DependentUpon>BuscarAlergia.cs</DependentUpon>
@@ -233,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BuscarMedicamento.resx">
       <DependentUpon>BuscarMedicamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CitasAsignadas.resx">
+      <DependentUpon>CitasAsignadas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarCita.resx">
       <DependentUpon>EliminarCita.cs</DependentUpon>
@@ -261,11 +250,11 @@
     <EmbeddedResource Include="ModificarPacientes.resx">
       <DependentUpon>ModificarPacientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PMMedicos.resx">
-      <DependentUpon>PMMedicos.cs</DependentUpon>
+    <EmbeddedResource Include="ParaModificarMedicos.resx">
+      <DependentUpon>ParaModificarMedicos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PMPacientes.resx">
-      <DependentUpon>PMPacientes.cs</DependentUpon>
+    <EmbeddedResource Include="ParaModificarPaciente.resx">
+      <DependentUpon>ParaModificarPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -281,39 +270,6 @@
     <EmbeddedResource Include="RegistroPacientes.resx">
       <DependentUpon>RegistroPacientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report1.rdlc" />
-    <EmbeddedResource Include="ReportCitas.rdlc" />
-    <EmbeddedResource Include="ReporteCitaFecha.resx">
-      <DependentUpon>ReporteCitaFecha.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReportesEstado.resx">
-      <DependentUpon>ReportesEstado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SignoVitalnter.resx">
-      <DependentUpon>SignoVitalnter.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="Asistidas.xsc">
-      <DependentUpon>Asistidas.xsd</DependentUpon>
-    </None>
-    <None Include="Asistidas.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Asistidas.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Asistidas.xss">
-      <DependentUpon>Asistidas.xsd</DependentUpon>
-    </None>
-    <None Include="CitaFecha.xsc">
-      <DependentUpon>CitaFecha.xsd</DependentUpon>
-    </None>
-    <None Include="CitaFecha.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CitaFecha.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="CitaFecha.xss">
-      <DependentUpon>CitaFecha.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -429,6 +385,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\salir.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginIngresar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginCancelar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consultacita.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

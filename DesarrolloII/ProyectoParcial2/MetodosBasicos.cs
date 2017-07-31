@@ -20,7 +20,7 @@ namespace ProyectoParcial2
             tabla.DataSource = listaAlergias;
             
         }
-    
+
         internal static void CargarTablaEnfermedades(DataGridView tabla)
         {
             EnfermedadNegocio datosTablaEnfermedades = new EnfermedadNegocio();
@@ -33,12 +33,6 @@ namespace ProyectoParcial2
         {
             EspecialidadNegocio agregarbox = new EspecialidadNegocio();
             agregarbox.cargarDatosBoxEspecialidad(cmbEspecialidad);
-        }
-
-        internal static void CargarBoxEspecialidad2(ComboBoxEdit cmbEspecialidad)
-        {
-            EspecialidadNegocio agregarbox = new EspecialidadNegocio();
-            agregarbox.cargarDatosBoxEspecialidad1(cmbEspecialidad);
         }
 
         internal static void CargarBox(ComboBoxEdit cmbTipo)
@@ -59,10 +53,6 @@ namespace ProyectoParcial2
             AlergiaNegocio agregarbox = new AlergiaNegocio();
             agregarbox.cargarDatosBox(cmbTipo);
         }
-
-       
-
-
 
         internal static void CargarBoxMedi(ComboBoxEdit cmbTipo)
         {
@@ -96,28 +86,6 @@ namespace ProyectoParcial2
             {
                 e.Handled = true;
             }
-        }
-
-        internal static void CargarTablaMedicos(DataGridView tabla)
-        {
-            PersonaTestNegocio datosTablaMedico = new PersonaTestNegocio();
-            var listaEnfermedad = datosTablaMedico.DevolverListaMedicos().Tables[0];
-            tabla.DataSource = listaEnfermedad;
-
-        }
-        internal static void CargarTablaPaciente(DataGridView tabla)
-        {
-            PersonaTestNegocio datosTablaPaciente = new PersonaTestNegocio();
-            var listaEnfermedad = datosTablaPaciente.DevolverListaPacientes().Tables[0];
-            tabla.DataSource = listaEnfermedad;
-
-        }
-        internal static void CargarTablaEspecialidades(DataGridView tabla)
-        {
-            EspecialidadNegocio datosTablaAlergias = new EspecialidadNegocio();
-            var listaAlergias = datosTablaAlergias.DevolverListaEspecialidades().Tables[0];
-            tabla.DataSource = listaAlergias;
-
         }
     }
 }

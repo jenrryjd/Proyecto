@@ -7,20 +7,47 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MENSAJES;
 
 namespace ProyectoParcial2
 {
     public partial class MenuPrincipal : Form
     {
+        private LoginMensajes datos;
+
         public MenuPrincipal()
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// CONSTRUCTOR PARA VALIDAR MENUS SEGUN EL PERFIL DE USUARIO
+        /// </summary>
+        /// <param name="datos"></param>
+        public MenuPrincipal(LoginMensajes datos)
+        {
+            InitializeComponent();
+            this.datos = datos;
+            barPerfil.Caption= datos.Perfil.ToUpper().Trim()+ " :  ";
+            barUsuario.Caption = datos.NombreUsuario.ToUpper();
+            barCargo.Caption = datos.Cargo.ToUpper().Trim();
+
+            if (datos.Perfil.Trim().Equals("DOCTOR"))
+            {
+                ribbonPageCitas.Visible = false;
+                ribbonPageEspecialistas.Visible = false;
+                ribbonPagePacientes.Visible = false;
+            }
+            if (datos.Perfil.Trim().Equals("ENFERMERA"))
+            {
+                ribbonPageAntecedentes.Visible = false;
+                ribbonPageEspecialistas.Visible = false;
+                ribbonPageAdministrarTrabajo.Visible = false;
+            }
+        }
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            RegistroPacientes ventanaPaci = new RegistroPacientes("");
-            ventanaPaci.Text = "Registro Pacientes";
+            RegistroPacientes ventanaPaci = new RegistroPacientes();
             ventanaPaci.MdiParent = this;
             ventanaPaci.Show();
         }
@@ -32,7 +59,7 @@ namespace ProyectoParcial2
 
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            AgendarCita citaFrm = new AgendarCita("");
+            AgendarCita citaFrm = new AgendarCita();
             citaFrm.Text = "Insertar Cita";
             citaFrm.MdiParent = this;
             citaFrm.btnInsertar.Visible = true;
@@ -52,10 +79,6 @@ namespace ProyectoParcial2
             espe.btnInsertarEspecia.Visible = false;
             espe.btnModificarEspe.Visible = true;
             espe.btnElimnarEspe.Visible =false;
-            espe.txtEspe.Enabled = true;
-            espe.comboBuscar.Enabled = true;
-            espe.dataGridView1.Enabled = true;
-            espe.Text = "Modificar Especialidad";
             espe.MdiParent = this;
             espe.Show();
         }
@@ -77,7 +100,6 @@ namespace ProyectoParcial2
         private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Medicos med = new Medicos();
-            med.Text = "Registro Medicos";
             med.MdiParent = this;
             med.Show();
         }
@@ -86,9 +108,7 @@ namespace ProyectoParcial2
         {
             ModificarMedicos modMed = new ModificarMedicos();
             modMed.btnEliminarModMed.Visible = false;
-            modMed.Text = "Modificar Medicos";
             modMed.MdiParent = this;
-            modMed.dataGridMedico.Visible = true;
             modMed.Show();
         }
 
@@ -96,9 +116,7 @@ namespace ProyectoParcial2
         {
             ModificarMedicos modMed = new ModificarMedicos();
             modMed.btnEliminarModMed.Visible = true;
-            modMed.Text = "Eliminar Medicos";
             modMed.MdiParent = this;
-            modMed.dataGridElimanrMedico.Visible = true;
             modMed.Show();
         }
 
@@ -108,9 +126,6 @@ namespace ProyectoParcial2
             espe.btnInsertarEspecia.Visible = true;
             espe.btnModificarEspe.Visible = false;
             espe.btnElimnarEspe.Visible = false;
-            espe.txtCodigo.Enabled = true;
-            espe.txtEspe.Enabled = true;
-            espe.Text = "Registrar Especialidad";
             espe.MdiParent = this;
             espe.Show();
         }
@@ -121,10 +136,7 @@ namespace ProyectoParcial2
             espe.btnInsertarEspecia.Visible = false;
             espe.btnModificarEspe.Visible = false;
             espe.btnElimnarEspe.Visible = true;
-            espe.dataGridView1.Enabled = true;
-            espe.comboBuscar.Enabled = true;
             espe.MdiParent = this;
-            espe.Text = "Eliminar Especialidad";
             espe.Show();
         }
 
@@ -132,15 +144,16 @@ namespace ProyectoParcial2
         {
             BuscarCitas modificarCita = new BuscarCitas();
             modificarCita.MdiParent = this;
+            modificarCita.dataGridCitas.Visible = true;
             modificarCita.Show();
         }
 
         private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            EliminarCita eliminarCita = new EliminarCita();
-            eliminarCita.Text = "Eliminar Cita";
-            eliminarCita.MdiParent = this;
-            eliminarCita.Show();
+            BuscarCitas modificarCita = new BuscarCitas();
+            modificarCita.MdiParent = this;
+            modificarCita.dataGridCitasEliminar.Visible = true;
+            modificarCita.Show();
         }
 
         private void barButtonItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -234,48 +247,36 @@ namespace ProyectoParcial2
             buscarMedicamento.Show();
         }
 
-        private void btnModificarPac_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void barEditItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            ModificarPacientes buscarMedicamento = new ModificarPacientes();
-            buscarMedicamento.Text = "Modificar Paciente";
-            buscarMedicamento.btnEliminar.Visible = false;
-            buscarMedicamento.dataGridPacientes.Visible = true;
-            buscarMedicamento.MdiParent = this;
-            buscarMedicamento.Show();
+
         }
 
-        private void btnEliminarPac_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void ribbonControl1_Click(object sender, EventArgs e)
         {
-            ModificarPacientes buscarMedicamento = new ModificarPacientes();
-            buscarMedicamento.Text = "Eliminar Paciente";
-          
-            buscarMedicamento.MdiParent = this;
-            buscarMedicamento.dataGridEliminarPaciente.Visible = true;
-            buscarMedicamento.Show();
+
         }
 
-        private void btnSignoVitalInsert_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void btnSalirMenuPrincipal_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            SignoVital sgv = new SignoVital();
-            sgv.Text = "Insertar Signo Vital";
-            sgv.MdiParent = this;
-            sgv.Show();
+            Login nuevo = new Login();
+            this.Hide();
+            nuevo.Show();
         }
 
-        private void btnCitaporFecha_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void barbtConsultaCitas_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-           ReporteCitaFecha sgv = new ReporteCitaFecha();
-            sgv.Text = "Reportes por Fecha";
-            sgv.MdiParent = this;
-            sgv.Show();
+            CitasAsignadas citas = new CitasAsignadas(barCargo.Caption.Trim());
+            citas.Text = "Citas Asignadas";
+            citas.MdiParent = this;
+            citas.Show();
         }
 
-        private void btnCitavariedad_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void barButtonItem9_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            ReportesEstado sgv = new ReportesEstado();
-            sgv.Text = "Reportes por Estado";
-            sgv.MdiParent = this;
-            sgv.Show();
+            AtencionTratamientoFrm citas = new AtencionTratamientoFrm();
+            citas.MdiParent = this;
+            citas.Show();
         }
     }
 }

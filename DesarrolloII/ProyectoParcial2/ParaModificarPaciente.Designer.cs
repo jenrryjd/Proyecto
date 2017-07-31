@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.textDireccion = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.textApellido = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.textTelefono = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.textCelular = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textNombre = new DevExpress.XtraEditors.TextEdit();
-            this.textCedula = new DevExpress.XtraEditors.TextEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.textDireccion.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textApellido.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textTelefono.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textCelular.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textNombre.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textCedula.Properties)).BeginInit();
+            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl3
@@ -59,13 +59,12 @@
             this.labelControl3.TabIndex = 42;
             this.labelControl3.Text = "Direccion:";
             // 
-            // textDireccion
+            // textEdit3
             // 
-            this.textDireccion.Location = new System.Drawing.Point(423, 151);
-            this.textDireccion.Name = "textDireccion";
-            this.textDireccion.Size = new System.Drawing.Size(100, 20);
-            this.textDireccion.TabIndex = 41;
-            this.textDireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textDireccion_KeyPress);
+            this.textEdit3.Location = new System.Drawing.Point(423, 151);
+            this.textEdit3.Name = "textEdit3";
+            this.textEdit3.Size = new System.Drawing.Size(100, 20);
+            this.textEdit3.TabIndex = 41;
             // 
             // labelControl4
             // 
@@ -75,13 +74,12 @@
             this.labelControl4.TabIndex = 40;
             this.labelControl4.Text = "Apellidos:";
             // 
-            // textApellido
+            // textEdit4
             // 
-            this.textApellido.Location = new System.Drawing.Point(163, 151);
-            this.textApellido.Name = "textApellido";
-            this.textApellido.Size = new System.Drawing.Size(100, 20);
-            this.textApellido.TabIndex = 39;
-            this.textApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textApellido_KeyPress);
+            this.textEdit4.Location = new System.Drawing.Point(163, 151);
+            this.textEdit4.Name = "textEdit4";
+            this.textEdit4.Size = new System.Drawing.Size(100, 20);
+            this.textEdit4.TabIndex = 39;
             // 
             // simpleButton2
             // 
@@ -90,7 +88,6 @@
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 38;
             this.simpleButton2.Text = "Cancelar";
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // simpleButton3
             // 
@@ -103,12 +100,11 @@
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(121, 215);
+            this.simpleButton1.Location = new System.Drawing.Point(127, 215);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 36;
             this.simpleButton1.Text = "Actualizar";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // labelControl6
             // 
@@ -118,13 +114,12 @@
             this.labelControl6.TabIndex = 35;
             this.labelControl6.Text = "Telefono:";
             // 
-            // textTelefono
+            // textEdit6
             // 
-            this.textTelefono.Location = new System.Drawing.Point(423, 109);
-            this.textTelefono.Name = "textTelefono";
-            this.textTelefono.Size = new System.Drawing.Size(100, 20);
-            this.textTelefono.TabIndex = 34;
-            this.textTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textTelefono_KeyPress);
+            this.textEdit6.Location = new System.Drawing.Point(423, 109);
+            this.textEdit6.Name = "textEdit6";
+            this.textEdit6.Size = new System.Drawing.Size(100, 20);
+            this.textEdit6.TabIndex = 34;
             // 
             // labelControl5
             // 
@@ -134,13 +129,12 @@
             this.labelControl5.TabIndex = 33;
             this.labelControl5.Text = "Celular:";
             // 
-            // textCelular
+            // textEdit5
             // 
-            this.textCelular.Location = new System.Drawing.Point(423, 62);
-            this.textCelular.Name = "textCelular";
-            this.textCelular.Size = new System.Drawing.Size(100, 20);
-            this.textCelular.TabIndex = 32;
-            this.textCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textCelular_KeyPress);
+            this.textEdit5.Location = new System.Drawing.Point(423, 62);
+            this.textEdit5.Name = "textEdit5";
+            this.textEdit5.Size = new System.Drawing.Size(100, 20);
+            this.textEdit5.TabIndex = 32;
             // 
             // labelControl2
             // 
@@ -158,21 +152,19 @@
             this.labelControl1.TabIndex = 30;
             this.labelControl1.Text = "Cedula:";
             // 
-            // textNombre
+            // textEdit2
             // 
-            this.textNombre.Location = new System.Drawing.Point(163, 100);
-            this.textNombre.Name = "textNombre";
-            this.textNombre.Size = new System.Drawing.Size(100, 20);
-            this.textNombre.TabIndex = 29;
-            this.textNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textNombre_KeyPress);
+            this.textEdit2.Location = new System.Drawing.Point(163, 100);
+            this.textEdit2.Name = "textEdit2";
+            this.textEdit2.Size = new System.Drawing.Size(100, 20);
+            this.textEdit2.TabIndex = 29;
             // 
-            // textCedula
+            // textEdit1
             // 
-            this.textCedula.Location = new System.Drawing.Point(163, 62);
-            this.textCedula.Name = "textCedula";
-            this.textCedula.Size = new System.Drawing.Size(100, 20);
-            this.textCedula.TabIndex = 28;
-            this.textCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textCedula_KeyPress);
+            this.textEdit1.Location = new System.Drawing.Point(163, 62);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(100, 20);
+            this.textEdit1.TabIndex = 28;
             // 
             // ParaModificarPaciente
             // 
@@ -180,29 +172,29 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(598, 285);
             this.Controls.Add(this.labelControl3);
-            this.Controls.Add(this.textDireccion);
+            this.Controls.Add(this.textEdit3);
             this.Controls.Add(this.labelControl4);
-            this.Controls.Add(this.textApellido);
+            this.Controls.Add(this.textEdit4);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.labelControl6);
-            this.Controls.Add(this.textTelefono);
+            this.Controls.Add(this.textEdit6);
             this.Controls.Add(this.labelControl5);
-            this.Controls.Add(this.textCelular);
+            this.Controls.Add(this.textEdit5);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.textNombre);
-            this.Controls.Add(this.textCedula);
+            this.Controls.Add(this.textEdit2);
+            this.Controls.Add(this.textEdit1);
             this.Name = "ParaModificarPaciente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ParaModificarPaciente";
-            ((System.ComponentModel.ISupportInitialize)(this.textDireccion.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textApellido.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textTelefono.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textCelular.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textNombre.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textCedula.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,19 +203,19 @@
         #endregion
 
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit textDireccion;
+        private DevExpress.XtraEditors.TextEdit textEdit3;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit textApellido;
+        private DevExpress.XtraEditors.TextEdit textEdit4;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.TextEdit textTelefono;
+        private DevExpress.XtraEditors.TextEdit textEdit6;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.TextEdit textCelular;
+        private DevExpress.XtraEditors.TextEdit textEdit5;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit textNombre;
-        private DevExpress.XtraEditors.TextEdit textCedula;
+        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
     }
 }

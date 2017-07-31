@@ -28,45 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtLicencia = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtFecha = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnFemenino = new System.Windows.Forms.RadioButton();
-            this.btnMasculino = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtCelula = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.cmbEstCi = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboEspecializacion = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.txtCelular = new DevExpress.XtraEditors.TextEdit();
-            this.label11 = new System.Windows.Forms.Label();
+            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.comboBoxEdit2 = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbEstCi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboEspecializacion.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCelular.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtLicencia
+            // textBox6
             // 
-            this.txtLicencia.Location = new System.Drawing.Point(352, 274);
-            this.txtLicencia.Name = "txtLicencia";
-            this.txtLicencia.Size = new System.Drawing.Size(127, 20);
-            this.txtLicencia.TabIndex = 45;
+            this.textBox6.Location = new System.Drawing.Point(352, 274);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(127, 20);
+            this.textBox6.TabIndex = 45;
             // 
             // label10
             // 
@@ -77,18 +74,18 @@
             this.label10.TabIndex = 44;
             this.label10.Text = "Licencia:";
             // 
-            // txtFecha
+            // dateTimePicker1
             // 
-            this.txtFecha.Location = new System.Drawing.Point(125, 336);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(97, 20);
-            this.txtFecha.TabIndex = 43;
-            this.txtFecha.Value = new System.DateTime(2017, 7, 17, 0, 0, 0, 0);
+            this.dateTimePicker1.Location = new System.Drawing.Point(125, 302);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(97, 20);
+            this.dateTimePicker1.TabIndex = 43;
+            this.dateTimePicker1.Value = new System.DateTime(2017, 7, 17, 0, 0, 0, 0);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(22, 336);
+            this.label9.Location = new System.Drawing.Point(22, 302);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(96, 13);
             this.label9.TabIndex = 42;
@@ -103,12 +100,12 @@
             this.label8.TabIndex = 40;
             this.label8.Text = "Especializacion:";
             // 
-            // txtTelefono
+            // textBox4
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(95, 250);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(127, 20);
-            this.txtTelefono.TabIndex = 39;
+            this.textBox4.Location = new System.Drawing.Point(95, 250);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(127, 20);
+            this.textBox4.TabIndex = 39;
             // 
             // label6
             // 
@@ -119,12 +116,12 @@
             this.label6.TabIndex = 38;
             this.label6.Text = "Telefono:";
             // 
-            // txtDireccion
+            // textBox5
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(95, 201);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(127, 20);
-            this.txtDireccion.TabIndex = 37;
+            this.textBox5.Location = new System.Drawing.Point(95, 201);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(127, 20);
+            this.textBox5.TabIndex = 37;
             // 
             // label7
             // 
@@ -144,27 +141,27 @@
             this.label5.TabIndex = 35;
             this.label5.Text = "Genero:";
             // 
-            // btnFemenino
+            // radioButton2
             // 
-            this.btnFemenino.AutoSize = true;
-            this.btnFemenino.Location = new System.Drawing.Point(355, 155);
-            this.btnFemenino.Name = "btnFemenino";
-            this.btnFemenino.Size = new System.Drawing.Size(71, 17);
-            this.btnFemenino.TabIndex = 34;
-            this.btnFemenino.TabStop = true;
-            this.btnFemenino.Text = "Femenino";
-            this.btnFemenino.UseVisualStyleBackColor = true;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(355, 155);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(71, 17);
+            this.radioButton2.TabIndex = 34;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Femenino";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // btnMasculino
+            // radioButton1
             // 
-            this.btnMasculino.AutoSize = true;
-            this.btnMasculino.Location = new System.Drawing.Point(353, 121);
-            this.btnMasculino.Name = "btnMasculino";
-            this.btnMasculino.Size = new System.Drawing.Size(73, 17);
-            this.btnMasculino.TabIndex = 33;
-            this.btnMasculino.TabStop = true;
-            this.btnMasculino.Text = "Masculino";
-            this.btnMasculino.UseVisualStyleBackColor = true;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(353, 121);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(73, 17);
+            this.radioButton1.TabIndex = 33;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Masculino";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // radioGroup1
             // 
@@ -182,12 +179,12 @@
             this.label4.TabIndex = 31;
             this.label4.Text = "Estado Civil:";
             // 
-            // txtApellido
+            // textBox3
             // 
-            this.txtApellido.Location = new System.Drawing.Point(95, 155);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(127, 20);
-            this.txtApellido.TabIndex = 29;
+            this.textBox3.Location = new System.Drawing.Point(95, 155);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(127, 20);
+            this.textBox3.TabIndex = 29;
             // 
             // label3
             // 
@@ -198,12 +195,12 @@
             this.label3.TabIndex = 28;
             this.label3.Text = "Apellido:";
             // 
-            // txtNombre
+            // textBox2
             // 
-            this.txtNombre.Location = new System.Drawing.Point(95, 106);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(127, 20);
-            this.txtNombre.TabIndex = 27;
+            this.textBox2.Location = new System.Drawing.Point(95, 106);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(127, 20);
+            this.textBox2.TabIndex = 27;
             // 
             // label2
             // 
@@ -214,12 +211,12 @@
             this.label2.TabIndex = 26;
             this.label2.Text = "Nombre:";
             // 
-            // txtCelula
+            // textBox1
             // 
-            this.txtCelula.Location = new System.Drawing.Point(95, 69);
-            this.txtCelula.Name = "txtCelula";
-            this.txtCelula.Size = new System.Drawing.Size(127, 20);
-            this.txtCelula.TabIndex = 25;
+            this.textBox1.Location = new System.Drawing.Point(95, 69);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(127, 20);
+            this.textBox1.TabIndex = 25;
             // 
             // label1
             // 
@@ -232,108 +229,87 @@
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(68, 376);
+            this.simpleButton1.Location = new System.Drawing.Point(68, 342);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 46;
             this.simpleButton1.Text = "Actualizar";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(211, 376);
+            this.simpleButton2.Location = new System.Drawing.Point(211, 342);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 47;
             this.simpleButton2.Text = "Cancelar";
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // simpleButton3
             // 
-            this.simpleButton3.Location = new System.Drawing.Point(377, 376);
+            this.simpleButton3.Location = new System.Drawing.Point(377, 342);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(75, 23);
             this.simpleButton3.TabIndex = 48;
             this.simpleButton3.Text = "Salir";
             this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
-            // cmbEstCi
+            // comboBoxEdit1
             // 
-            this.cmbEstCi.Location = new System.Drawing.Point(334, 66);
-            this.cmbEstCi.Name = "cmbEstCi";
-            this.cmbEstCi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.comboBoxEdit1.Location = new System.Drawing.Point(334, 66);
+            this.comboBoxEdit1.Name = "comboBoxEdit1";
+            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbEstCi.Properties.Items.AddRange(new object[] {
+            this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
             "Soltero(a)",
             "Viudo(a)",
             "Union Libre"});
-            this.cmbEstCi.Size = new System.Drawing.Size(145, 20);
-            this.cmbEstCi.TabIndex = 49;
+            this.comboBoxEdit1.Size = new System.Drawing.Size(145, 20);
+            this.comboBoxEdit1.TabIndex = 49;
             // 
-            // comboEspecializacion
+            // comboBoxEdit2
             // 
-            this.comboEspecializacion.Location = new System.Drawing.Point(352, 219);
-            this.comboEspecializacion.Name = "comboEspecializacion";
-            this.comboEspecializacion.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.comboBoxEdit2.Location = new System.Drawing.Point(352, 219);
+            this.comboBoxEdit2.Name = "comboBoxEdit2";
+            this.comboBoxEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboEspecializacion.Size = new System.Drawing.Size(127, 20);
-            this.comboEspecializacion.TabIndex = 50;
-            // 
-            // txtCelular
-            // 
-            this.txtCelular.Location = new System.Drawing.Point(95, 294);
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(135, 20);
-            this.txtCelular.TabIndex = 52;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(22, 297);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(42, 13);
-            this.label11.TabIndex = 51;
-            this.label11.Text = "Celular:";
+            this.comboBoxEdit2.Size = new System.Drawing.Size(127, 20);
+            this.comboBoxEdit2.TabIndex = 50;
             // 
             // ParaModificarMedicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(529, 426);
-            this.Controls.Add(this.txtCelular);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.comboEspecializacion);
-            this.Controls.Add(this.cmbEstCi);
+            this.ClientSize = new System.Drawing.Size(529, 388);
+            this.Controls.Add(this.comboBoxEdit2);
+            this.Controls.Add(this.comboBoxEdit1);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
-            this.Controls.Add(this.txtLicencia);
+            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtFecha);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtTelefono);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtDireccion);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.btnFemenino);
-            this.Controls.Add(this.btnMasculino);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.radioGroup1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtApellido);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtCelula);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "ParaModificarMedicos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ParaModificarMedicos";
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbEstCi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboEspecializacion.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCelular.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,32 +317,30 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtLicencia;
+        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DateTimePicker txtFecha;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RadioButton btnFemenino;
-        private System.Windows.Forms.RadioButton btnMasculino;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
         private DevExpress.XtraEditors.RadioGroup radioGroup1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtCelula;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbEstCi;
-        private DevExpress.XtraEditors.ComboBoxEdit comboEspecializacion;
-        private DevExpress.XtraEditors.TextEdit txtCelular;
-        private System.Windows.Forms.Label label11;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit2;
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtEspe = new DevExpress.XtraEditors.TextEdit();
@@ -43,24 +42,20 @@
             this.comboBuscar = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtCodigo = new DevExpress.XtraEditors.TextEdit();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEspe.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBuscar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBuscar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 207);
+            this.dataGridView1.Location = new System.Drawing.Point(23, 229);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(389, 165);
             this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellBorderStyleChanged += new System.EventHandler(this.dataGridView1_CellBorderStyleChanged);
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // labelControl2
             // 
@@ -76,11 +71,10 @@
             this.txtEspe.Name = "txtEspe";
             this.txtEspe.Size = new System.Drawing.Size(219, 20);
             this.txtEspe.TabIndex = 3;
-            this.txtEspe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEspe_KeyPress);
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(342, 388);
+            this.simpleButton1.Location = new System.Drawing.Point(342, 410);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 5;
@@ -89,7 +83,7 @@
             // 
             // btnInsertarEspecia
             // 
-            this.btnInsertarEspecia.Location = new System.Drawing.Point(86, 388);
+            this.btnInsertarEspecia.Location = new System.Drawing.Point(86, 410);
             this.btnInsertarEspecia.Name = "btnInsertarEspecia";
             this.btnInsertarEspecia.Size = new System.Drawing.Size(75, 23);
             this.btnInsertarEspecia.TabIndex = 8;
@@ -98,21 +92,19 @@
             // 
             // btnModificarEspe
             // 
-            this.btnModificarEspe.Location = new System.Drawing.Point(86, 388);
+            this.btnModificarEspe.Location = new System.Drawing.Point(152, 422);
             this.btnModificarEspe.Name = "btnModificarEspe";
             this.btnModificarEspe.Size = new System.Drawing.Size(75, 23);
             this.btnModificarEspe.TabIndex = 9;
             this.btnModificarEspe.Text = "Modificar";
-            this.btnModificarEspe.Click += new System.EventHandler(this.btnModificarEspe_Click);
             // 
             // btnElimnarEspe
             // 
-            this.btnElimnarEspe.Location = new System.Drawing.Point(86, 388);
+            this.btnElimnarEspe.Location = new System.Drawing.Point(32, 410);
             this.btnElimnarEspe.Name = "btnElimnarEspe";
             this.btnElimnarEspe.Size = new System.Drawing.Size(75, 23);
             this.btnElimnarEspe.TabIndex = 10;
             this.btnElimnarEspe.Text = "Eliminar";
-            this.btnElimnarEspe.Click += new System.EventHandler(this.btnElimnarEspe_Click);
             // 
             // txtBuscar
             // 
@@ -120,17 +112,14 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(152, 20);
             this.txtBuscar.TabIndex = 11;
-            this.txtBuscar.EditValueChanged += new System.EventHandler(this.txtBuscar_EditValueChanged);
-            this.txtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscar_KeyPress);
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(248, 388);
+            this.simpleButton2.Location = new System.Drawing.Point(248, 410);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 13;
             this.simpleButton2.Text = "Cancelar";
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // label4
             // 
@@ -146,9 +135,9 @@
             this.lblCambiante.AutoSize = true;
             this.lblCambiante.Location = new System.Drawing.Point(20, 172);
             this.lblCambiante.Name = "lblCambiante";
-            this.lblCambiante.Size = new System.Drawing.Size(33, 13);
+            this.lblCambiante.Size = new System.Drawing.Size(65, 13);
             this.lblCambiante.TabIndex = 34;
-            this.lblCambiante.Text = "Dato:";
+            this.lblCambiante.Text = "Estado Civil:";
             // 
             // comboBuscar
             // 
@@ -157,8 +146,8 @@
             this.comboBuscar.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.comboBuscar.Properties.Items.AddRange(new object[] {
-            "Codigo",
-            "Especialidad"});
+            "CODIGO",
+            "ESPECIALIDAD"});
             this.comboBuscar.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.comboBuscar.Size = new System.Drawing.Size(152, 20);
             this.comboBuscar.TabIndex = 35;
@@ -180,15 +169,11 @@
             this.txtCodigo.Size = new System.Drawing.Size(219, 20);
             this.txtCodigo.TabIndex = 36;
             // 
-            // dxErrorProvider1
-            // 
-            this.dxErrorProvider1.ContainerControl = this;
-            // 
             // Especialidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(441, 428);
+            this.ClientSize = new System.Drawing.Size(441, 457);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.comboBuscar);
@@ -203,38 +188,33 @@
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.txtEspe);
             this.Controls.Add(this.dataGridView1);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Especialidad";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Especialidad";
-            this.Load += new System.EventHandler(this.Especialidad_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEspe.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBuscar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBuscar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+        private System.Windows.Forms.DataGridView dataGridView1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.TextEdit txtEspe;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         public DevExpress.XtraEditors.SimpleButton btnInsertarEspecia;
         public DevExpress.XtraEditors.SimpleButton btnModificarEspe;
         public DevExpress.XtraEditors.SimpleButton btnElimnarEspe;
+        private DevExpress.XtraEditors.TextEdit txtBuscar;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblCambiante;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBuscar;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
-        public DevExpress.XtraEditors.TextEdit txtEspe;
-        public DevExpress.XtraEditors.TextEdit txtBuscar;
-        public DevExpress.XtraEditors.ComboBoxEdit comboBuscar;
-        public DevExpress.XtraEditors.TextEdit txtCodigo;
-        public System.Windows.Forms.DataGridView dataGridView1;
+        private DevExpress.XtraEditors.TextEdit txtCodigo;
     }
 }

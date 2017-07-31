@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,11 +51,10 @@
             this.txtDireccion = new DevExpress.XtraEditors.TextEdit();
             this.txtTelefono = new DevExpress.XtraEditors.TextEdit();
             this.btnSalir = new DevExpress.XtraEditors.SimpleButton();
+            this.comboCivil = new System.Windows.Forms.ComboBox();
+            this.comboEspe = new System.Windows.Forms.ComboBox();
             this.txtCelular = new DevExpress.XtraEditors.TextEdit();
             this.label11 = new System.Windows.Forms.Label();
-            this.dxErrorProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.comboEspc = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboCivil = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLicen.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCedula.Properties)).BeginInit();
@@ -65,8 +63,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDireccion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefono.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCelular.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboEspc.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -107,7 +103,7 @@
             // 
             // radioGroup1
             // 
-            this.radioGroup1.Location = new System.Drawing.Point(362, 79);
+            this.radioGroup1.Location = new System.Drawing.Point(346, 79);
             this.radioGroup1.Name = "radioGroup1";
             this.radioGroup1.Size = new System.Drawing.Size(117, 88);
             this.radioGroup1.TabIndex = 8;
@@ -172,7 +168,7 @@
             // 
             // btnInsertar
             // 
-            this.btnInsertar.Location = new System.Drawing.Point(87, 358);
+            this.btnInsertar.Location = new System.Drawing.Point(87, 373);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(75, 23);
             this.btnInsertar.TabIndex = 18;
@@ -208,20 +204,18 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(210, 358);
+            this.btnCancelar.Location = new System.Drawing.Point(210, 373);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 24;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // txtLicen
             // 
             this.txtLicen.Location = new System.Drawing.Point(362, 244);
             this.txtLicen.Name = "txtLicen";
-            this.txtLicen.Size = new System.Drawing.Size(121, 20);
+            this.txtLicen.Size = new System.Drawing.Size(135, 20);
             this.txtLicen.TabIndex = 25;
-            this.txtLicen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLicen_KeyPress);
             // 
             // txtCedula
             // 
@@ -229,7 +223,6 @@
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(135, 20);
             this.txtCedula.TabIndex = 26;
-            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             // 
             // txtNombre
             // 
@@ -237,7 +230,6 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(135, 20);
             this.txtNombre.TabIndex = 27;
-            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtApellidos
             // 
@@ -245,7 +237,6 @@
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(135, 20);
             this.txtApellidos.TabIndex = 28;
-            this.txtApellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidos_KeyPress);
             // 
             // txtDireccion
             // 
@@ -253,7 +244,6 @@
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(135, 20);
             this.txtDireccion.TabIndex = 29;
-            this.txtDireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccion_KeyPress);
             // 
             // txtTelefono
             // 
@@ -261,16 +251,39 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(135, 20);
             this.txtTelefono.TabIndex = 30;
-            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(342, 358);
+            this.btnSalir.Location = new System.Drawing.Point(342, 373);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 31;
             this.btnSalir.Text = "Salir";
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // comboCivil
+            // 
+            this.comboCivil.FormattingEnabled = true;
+            this.comboCivil.Items.AddRange(new object[] {
+            "SOLTERO(A)",
+            "CASADO(A)",
+            "UNION LIBRE"});
+            this.comboCivil.Location = new System.Drawing.Point(362, 34);
+            this.comboCivil.Name = "comboCivil";
+            this.comboCivil.Size = new System.Drawing.Size(121, 21);
+            this.comboCivil.TabIndex = 32;
+            // 
+            // comboEspe
+            // 
+            this.comboEspe.FormattingEnabled = true;
+            this.comboEspe.Items.AddRange(new object[] {
+            "PEERIS ",
+            "NIÑO",
+            "DABURA"});
+            this.comboEspe.Location = new System.Drawing.Point(362, 195);
+            this.comboEspe.Name = "comboEspe";
+            this.comboEspe.Size = new System.Drawing.Size(121, 21);
+            this.comboEspe.TabIndex = 33;
             // 
             // txtCelular
             // 
@@ -278,7 +291,6 @@
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(135, 20);
             this.txtCelular.TabIndex = 35;
-            this.txtCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCelular_KeyPress);
             // 
             // label11
             // 
@@ -289,39 +301,14 @@
             this.label11.TabIndex = 34;
             this.label11.Text = "Celular:";
             // 
-            // dxErrorProvider1
-            // 
-            this.dxErrorProvider1.ContainerControl = this;
-            // 
-            // comboEspc
-            // 
-            this.comboEspc.Location = new System.Drawing.Point(365, 192);
-            this.comboEspc.Name = "comboEspc";
-            this.comboEspc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboEspc.Size = new System.Drawing.Size(118, 20);
-            this.comboEspc.TabIndex = 36;
-            // 
-            // comboCivil
-            // 
-            this.comboCivil.FormattingEnabled = true;
-            this.comboCivil.Items.AddRange(new object[] {
-            "Soltero(a)",
-            "Viudo(a)",
-            "Union Libre"});
-            this.comboCivil.Location = new System.Drawing.Point(362, 34);
-            this.comboCivil.Name = "comboCivil";
-            this.comboCivil.Size = new System.Drawing.Size(121, 21);
-            this.comboCivil.TabIndex = 32;
-            // 
             // Medicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 410);
-            this.Controls.Add(this.comboEspc);
+            this.ClientSize = new System.Drawing.Size(534, 443);
             this.Controls.Add(this.txtCelular);
             this.Controls.Add(this.label11);
+            this.Controls.Add(this.comboEspe);
             this.Controls.Add(this.comboCivil);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.txtTelefono);
@@ -346,12 +333,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Medicos";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Medicos";
-            this.Load += new System.EventHandler(this.Medicos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLicen.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCedula.Properties)).EndInit();
@@ -360,8 +344,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDireccion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefono.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCelular.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxErrorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboEspc.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -392,10 +374,9 @@
         private DevExpress.XtraEditors.TextEdit txtDireccion;
         private DevExpress.XtraEditors.TextEdit txtTelefono;
         private DevExpress.XtraEditors.SimpleButton btnSalir;
+        private System.Windows.Forms.ComboBox comboCivil;
+        private System.Windows.Forms.ComboBox comboEspe;
         private DevExpress.XtraEditors.TextEdit txtCelular;
         private System.Windows.Forms.Label label11;
-        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider dxErrorProvider1;
-        private DevExpress.XtraEditors.ComboBoxEdit comboEspc;
-        private System.Windows.Forms.ComboBox comboCivil;
     }
 }

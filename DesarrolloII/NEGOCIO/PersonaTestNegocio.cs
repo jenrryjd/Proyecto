@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using MENSAJES;
 using DAL;
 using DevExpress.XtraEditors;
-using System.Data;
 
 namespace NEGOCIO
 {
@@ -19,7 +18,12 @@ namespace NEGOCIO
             return ms;
         }
 
-     
+        public static object GuardarPacienteMensaje(PacienteMensaje paciente)
+        {
+            PacienteMensaje md = new PacienteMensaje();
+            md = PersonaTestDAL.GuardarPac(paciente);
+            return md;
+        }
 
         public object DevolverNombrePaciente(string text)
         {
@@ -31,83 +35,5 @@ namespace NEGOCIO
         {
             PersonaTestDAL.CargaDoctores(especialidad, txtCedDoc, txtNomDoc);
         }
-
-        public DataSet DevolverListaMedicos()
-        {
-            return PersonaTestDAL.CargarListaDatosMedicosPacientes(MedicosBuscarDAL.DevuelveListaMedicos());
-        }
-        public DataSet DevolverListaMedicosCedula(string idMedico)
-        {
-            return PersonaTestDAL.CargarListaDatosMedicosPacientes(MedicosBuscarDAL.DevuelveListaCedulaMedicos(idMedico));
-        }
-        public DataSet DevolverListaMedicosNombre(string NombreMedico)
-        {
-            return PersonaTestDAL.CargarListaDatosMedicosPacientes(MedicosBuscarDAL.DevuelveListaNombreMedicos(NombreMedico));
-        }
-        public DataSet DevolverListaMedicosApellido(string ApellidoMedico)
-        {
-            return PersonaTestDAL.CargarListaDatosMedicosPacientes(MedicosBuscarDAL.DevuelveListaApellidoMedicos(ApellidoMedico));
-        }
-
-
-        public DataSet DevolverListaPacientes()
-        {
-            return PersonaTestDAL.CargarListaDatosMedicosPacientes(PacientesBuscarDAL.DevuelveListaPacientes());
-        }
-
-        public DataSet DevolverListaPacientesCedula(string idPaciente)
-        {
-            return PersonaTestDAL.CargarListaDatosMedicosPacientes(PacientesBuscarDAL.DevuelveListaCedulaPacientes(idPaciente));
-        }
-
-        public static object GuardarPacienteMensaje(PacienteMensaje paciente)
-        {
-            PacienteMensaje md = new PacienteMensaje();
-            md = PersonaTestDAL.GuardarPac(paciente);
-            return md;
-        }
-
-
-        public static object ModificarPaciente(PacienteMensaje actualizarPaciente)
-        {
-          
-            PacienteMensaje ms = new PacienteMensaje();
-            ms = PersonaTestDAL.ActualizarPaciente(actualizarPaciente);
-
-            return ms;
-    }
-        public static object ModificarMedico(MedicoMensaje actualizarMedico)
-        {
-
-            MedicoMensaje ms = new MedicoMensaje();
-            ms = PersonaTestDAL.ActualizarMedico(actualizarMedico);
-
-            return ms;
-        }
-
-        public DataSet DevolverListaPacienteNombre(string NombrePaciente)
-        {
-            return PersonaTestDAL.CargarListaDatosMedicosPacientes(PacientesBuscarDAL.DevuelveListaNombrePacientes(NombrePaciente));
-        }
-
-        public DataSet DevolverListaPacienteApellido(string ApellidoPaciente)
-        {
-            return PersonaTestDAL.CargarListaDatosMedicosPacientes(PacientesBuscarDAL.DevuelveListaApellidoPacientes(ApellidoPaciente));
-        }
-
-        public static object EliminarPaciente(PacienteMensaje pacienteEliminar)
-        {
-            PacienteMensaje ms = new PacienteMensaje();
-            ms = PersonaTestDAL.EliminarPac(pacienteEliminar);
-            return ms;
-        }
-
-        public static object EliminarMedico(MedicoMensaje medicoEliminar)
-        {
-            MedicoMensaje ms = new MedicoMensaje();
-            ms = PersonaTestDAL.EliminarMed(medicoEliminar);
-            return ms;
-        }
-
     }
 }

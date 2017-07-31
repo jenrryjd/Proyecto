@@ -261,10 +261,5 @@ namespace ProyectoParcial2
         {
 
         }
-
-        private void txtTipo_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

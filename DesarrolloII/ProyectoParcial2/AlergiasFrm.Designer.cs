@@ -170,9 +170,9 @@
             // btnActualizar
             // 
             this.btnActualizar.Image = global::ProyectoParcial2.Properties.Resources.if_82Add_create_new_cross_medical_plus_1886149;
-            this.btnActualizar.Location = new System.Drawing.Point(119, 399);
+            this.btnActualizar.Location = new System.Drawing.Point(90, 450);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(105, 59);
+            this.btnActualizar.Size = new System.Drawing.Size(105, 45);
             this.btnActualizar.TabIndex = 6;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.Visible = false;
@@ -185,7 +185,6 @@
             this.txtTipo.Size = new System.Drawing.Size(105, 20);
             this.txtTipo.TabIndex = 3;
             this.txtTipo.Visible = false;
-            this.txtTipo.EditValueChanged += new System.EventHandler(this.txtTipo_EditValueChanged);
             // 
             // txtDescripcion
             // 
@@ -210,7 +209,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Image = global::ProyectoParcial2.Properties.Resources.if_Artboard_1_1790656;
-            this.btnEliminar.Location = new System.Drawing.Point(30, 444);
+            this.btnEliminar.Location = new System.Drawing.Point(90, 450);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(105, 45);
             this.btnEliminar.TabIndex = 50;

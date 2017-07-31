@@ -45,15 +45,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlergiaMensajes.cs" />
+    <Compile Include="AtencionTratamientoMensajes.cs" />
     <Compile Include="CitaMensajes.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="EnfermedadesMensajes.cs" />
     <Compile Include="EspecialidadMensaje.cs" />
+    <Compile Include="HistoriaMedicaMensajes.cs" />
+    <Compile Include="LoginMensajes.cs" />
     <Compile Include="MedicamentosMensaje.cs" />
     <Compile Include="MedicoMensaje.cs" />
     <Compile Include="PacienteMensaje.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SignosVitales.cs" />
+    <Compile Include="RecetaMensajes.cs" />
+    <Compile Include="SignosMensajes.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
