@@ -24,11 +24,6 @@ namespace NEGOCIO
             Cita.ConsultaHorario(txtCedDoc,dateTimeFechaCita,combo);
         }
 
-        public DataSet DevolverListaCitasCargo(string cargo)
-        {
-            return Cita.CargarListaDatos(CitasBuscar.DevuelveListaPorcargo(cargo));
-        }
-
         public static void EliminarCita(string id)
         {
             CitaMensajes ms = new CitaMensajes();
@@ -40,22 +35,5 @@ namespace NEGOCIO
             return Cita.CargarListaDatos(CitasBuscar.DevuelveListaPorNombre(text));
         }
 
-        public static object ActualizarCita(CitaMensajes citaActualizar)
-        {
-            CitaMensajes ms = new CitaMensajes();
-            ms = Cita.Actualizar(citaActualizar);
-            return ms;
-        }
-
-        public void ActualizaEstado(string id, string observacionAtencionMedica)
-        {
-            CitaMensajes ms = new CitaMensajes();
-            Cita.ActualizarEstado(id, observacionAtencionMedica);
-        }
-
-        public static void cancelarCita(string id,string v)
-        {
-            Cita.ActualizarEstado(id,v);            
-        }
     }
 }

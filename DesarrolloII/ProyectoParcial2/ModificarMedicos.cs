@@ -144,10 +144,5 @@ namespace ProyectoParcial2
                 dataGridMedico.DataSource = lista2.Tables[0];
             }
         }
-
-        private void simpleButton2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
     }
 }

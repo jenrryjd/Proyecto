@@ -159,30 +159,19 @@ namespace DAL
 
         public static string ConsultaNombre(string text)
         {
-            try
-            {
-                           
             using (TransactionScope scope = new TransactionScope())
             {
                 using (SqlConnection connection = new SqlConnection(ConexionClinica.Default.Conexion))
                 {
                     connection.Open();
-                    string queryString = "SELECT [NOM_PAC],[APE_PAC] FROM [dbo].[PACIENTE] WHERE [CED_PAC]=@cedula;";
+                    string queryString = "SELECT [NOM_PAC] FROM [dbo].[PACIENTE] WHERE [CED_PAC]=@cedula;";
                     SqlCommand cmd = new SqlCommand(queryString, connection);
                     cmd.Parameters.AddWithValue("@cedula",text);
 
-                        var dr = cmd.ExecuteReader();
-                        string nombre=null, apellido=null, NombrePaciente=null;
-                        if (dr.Read())
-                        {
-                            nombre = (dr["NOM_PAC"].ToString().Trim());
-                            apellido= (dr["APE_PAC"].ToString());
-                        }
+                    var NombrePaciente = cmd.ExecuteScalar();
 
-                        NombrePaciente = nombre+" "+apellido;
-                        dr.Close();                        
-                            
-                    if (NombrePaciente==" ")
+                    string nombre;
+                    if (NombrePaciente==null)
                     {
                         nombre = "";
                     }
@@ -195,13 +184,6 @@ namespace DAL
                     scope.Complete();
                     return nombre;
                 }
-            }
-            }
-            catch (Exception)
-            {
-
-                XtraMessageBox.Show("Error al Consutar nombre del paciente.");
-                return "";
             }
         }
 

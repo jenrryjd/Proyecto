@@ -46,7 +46,6 @@
             this.txtRazonBuscar.Name = "txtRazonBuscar";
             this.txtRazonBuscar.Size = new System.Drawing.Size(127, 20);
             this.txtRazonBuscar.TabIndex = 37;
-            this.txtRazonBuscar.EditValueChanged += new System.EventHandler(this.txtRazonBuscar_EditValueChanged);
             this.txtRazonBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRazonBuscar_KeyPress);
             // 
             // cmbRazonSocial

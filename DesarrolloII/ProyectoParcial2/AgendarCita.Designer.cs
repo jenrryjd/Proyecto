@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtNCita = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -37,6 +36,7 @@
             this.cmbEspecialidad = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.txtCedula = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.txtNombre = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
@@ -53,14 +53,14 @@
             this.btnInsertar = new DevExpress.XtraEditors.SimpleButton();
             this.btnSalir = new DevExpress.XtraEditors.SimpleButton();
             this.comboBoxHorario = new System.Windows.Forms.ComboBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtCedula = new System.Windows.Forms.TextBox();
+            this.txtBuscar = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNCita.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbEspecialidad.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCedula.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNomDoc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCedDoc.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBuscar.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -129,6 +129,13 @@
             this.labelControl7.TabIndex = 18;
             this.labelControl7.Text = "Cedula del Paciente:";
             // 
+            // txtCedula
+            // 
+            this.txtCedula.Location = new System.Drawing.Point(135, 90);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(202, 20);
+            this.txtCedula.TabIndex = 19;
+            // 
             // labelControl8
             // 
             this.labelControl8.Location = new System.Drawing.Point(30, 135);
@@ -152,6 +159,7 @@
             this.labelControl9.Size = new System.Drawing.Size(93, 13);
             this.labelControl9.TabIndex = 22;
             this.labelControl9.Text = "Nombre del Doctor:";
+            this.labelControl9.Click += new System.EventHandler(this.labelControl9_Click);
             // 
             // labelControl5
             // 
@@ -196,18 +204,17 @@
             // btnCancelarEliminar
             // 
             this.btnCancelarEliminar.Image = global::ProyectoParcial2.Properties.Resources.cancelar;
-            this.btnCancelarEliminar.Location = new System.Drawing.Point(165, 405);
+            this.btnCancelarEliminar.Location = new System.Drawing.Point(165, 375);
             this.btnCancelarEliminar.Name = "btnCancelarEliminar";
             this.btnCancelarEliminar.Size = new System.Drawing.Size(105, 45);
             this.btnCancelarEliminar.TabIndex = 59;
             this.btnCancelarEliminar.Text = "Cancelar";
             this.btnCancelarEliminar.Visible = false;
-            this.btnCancelarEliminar.Click += new System.EventHandler(this.btnCancelarEliminar_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.Image = global::ProyectoParcial2.Properties.Resources.if_Artboard_1_1790656;
-            this.btnEliminar.Location = new System.Drawing.Point(30, 405);
+            this.btnEliminar.Location = new System.Drawing.Point(30, 375);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(105, 45);
             this.btnEliminar.TabIndex = 58;
@@ -218,24 +225,22 @@
             // btnCancelarActualizacion
             // 
             this.btnCancelarActualizacion.Image = global::ProyectoParcial2.Properties.Resources.cancelar;
-            this.btnCancelarActualizacion.Location = new System.Drawing.Point(165, 405);
+            this.btnCancelarActualizacion.Location = new System.Drawing.Point(150, 435);
             this.btnCancelarActualizacion.Name = "btnCancelarActualizacion";
             this.btnCancelarActualizacion.Size = new System.Drawing.Size(105, 45);
             this.btnCancelarActualizacion.TabIndex = 57;
             this.btnCancelarActualizacion.Text = "Cancelar";
             this.btnCancelarActualizacion.Visible = false;
-            this.btnCancelarActualizacion.Click += new System.EventHandler(this.btnCancelarActualizacion_Click);
             // 
             // btnActualizar
             // 
             this.btnActualizar.Image = global::ProyectoParcial2.Properties.Resources.if_82Add_create_new_cross_medical_plus_1886149;
-            this.btnActualizar.Location = new System.Drawing.Point(30, 405);
+            this.btnActualizar.Location = new System.Drawing.Point(30, 435);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(105, 45);
             this.btnActualizar.TabIndex = 54;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.Visible = false;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnCancelar
             // 
@@ -246,7 +251,6 @@
             this.btnCancelar.TabIndex = 55;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Visible = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnInsertar
             // 
@@ -288,24 +292,20 @@
             this.comboBoxHorario.Size = new System.Drawing.Size(121, 21);
             this.comboBoxHorario.TabIndex = 60;
             // 
-            // errorProvider1
+            // txtBuscar
             // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // txtCedula
-            // 
-            this.txtCedula.Location = new System.Drawing.Point(135, 90);
-            this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(195, 20);
-            this.txtCedula.TabIndex = 61;
-            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
+            this.txtBuscar.Location = new System.Drawing.Point(135, 75);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(202, 20);
+            this.txtBuscar.TabIndex = 61;
+            this.txtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscar_KeyPress);
             // 
             // AgendarCita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(436, 470);
-            this.Controls.Add(this.txtCedula);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.comboBoxHorario);
             this.Controls.Add(this.btnCancelarEliminar);
             this.Controls.Add(this.btnEliminar);
@@ -322,6 +322,7 @@
             this.Controls.Add(this.labelControl9);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.labelControl8);
+            this.Controls.Add(this.txtCedula);
             this.Controls.Add(this.labelControl7);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.cmbEspecialidad);
@@ -336,10 +337,11 @@
             this.Load += new System.EventHandler(this.AgendarCita_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtNCita.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbEspecialidad.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCedula.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNomDoc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCedDoc.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBuscar.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,6 +357,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.SimpleButton btnBuscarPac;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         public DevExpress.XtraEditors.SimpleButton btnCancelarEliminar;
         public DevExpress.XtraEditors.SimpleButton btnEliminar;
@@ -366,12 +369,11 @@
         public DevExpress.XtraEditors.TextEdit txtNCita;
         public System.Windows.Forms.DateTimePicker dateTimeFechaCita;
         public DevExpress.XtraEditors.ComboBoxEdit cmbEspecialidad;
+        public DevExpress.XtraEditors.TextEdit txtCedula;
         public DevExpress.XtraEditors.TextEdit txtNombre;
         public DevExpress.XtraEditors.TextEdit txtNomDoc;
         public DevExpress.XtraEditors.TextEdit txtCedDoc;
         public System.Windows.Forms.ComboBox comboBoxHorario;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
-        public DevExpress.XtraEditors.SimpleButton btnBuscarPac;
-        public System.Windows.Forms.TextBox txtCedula;
+        public DevExpress.XtraEditors.TextEdit txtBuscar;
     }
 }
