@@ -38,5 +38,10 @@ namespace ProyectoParcial2
                 lblCambiante.Text = "Especialidad";
             }
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

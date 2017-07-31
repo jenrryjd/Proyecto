@@ -84,6 +84,7 @@
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 15;
             this.simpleButton2.Text = "Salir";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // dataGridView1
             // 
@@ -115,6 +116,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "ModificarPacientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModificarPacientes";
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();

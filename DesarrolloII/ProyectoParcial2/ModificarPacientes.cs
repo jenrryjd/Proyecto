@@ -16,5 +16,10 @@ namespace ProyectoParcial2
         {
             InitializeComponent();
         }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

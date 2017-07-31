@@ -73,5 +73,10 @@ namespace ProyectoParcial2
 
             var resultado = PersonaTestNegocio.GuardarMedicoMensaje(med);
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

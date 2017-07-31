@@ -96,6 +96,7 @@
             this.simpleButton3.Size = new System.Drawing.Size(75, 23);
             this.simpleButton3.TabIndex = 37;
             this.simpleButton3.Text = "Salir";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // simpleButton1
             // 
@@ -186,6 +187,7 @@
             this.Controls.Add(this.textEdit2);
             this.Controls.Add(this.textEdit1);
             this.Name = "ParaModificarPaciente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ParaModificarPaciente";
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();

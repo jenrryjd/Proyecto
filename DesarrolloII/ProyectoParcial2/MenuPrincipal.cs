@@ -7,14 +7,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MENSAJES;
 
 namespace ProyectoParcial2
 {
     public partial class MenuPrincipal : Form
     {
+        private LoginMensajes datos;
+
         public MenuPrincipal()
         {
             InitializeComponent();
+        }
+        /// <summary>
+        /// CONSTRUCTOR PARA VALIDAR MENUS SEGUN EL PERFIL DE USUARIO
+        /// </summary>
+        /// <param name="datos"></param>
+        public MenuPrincipal(LoginMensajes datos)
+        {
+            InitializeComponent();
+            this.datos = datos;
+            barPerfil.Caption= datos.Perfil.ToUpper().Trim()+ " :  ";
+            barUsuario.Caption = datos.NombreUsuario.ToUpper();
+            barCargo.Caption = datos.Cargo.ToUpper().Trim();
+
+            if (datos.Perfil.Trim().Equals("DOCTOR"))
+            {
+                ribbonPageCitas.Visible = false;
+                ribbonPageEspecialistas.Visible = false;
+                ribbonPagePacientes.Visible = false;
+            }
+            if (datos.Perfil.Trim().Equals("ENFERMERA"))
+            {
+                ribbonPageAntecedentes.Visible = false;
+                ribbonPageEspecialistas.Visible = false;
+                ribbonPageAdministrarTrabajo.Visible = false;
+            }
         }
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -116,14 +144,16 @@ namespace ProyectoParcial2
         {
             BuscarCitas modificarCita = new BuscarCitas();
             modificarCita.MdiParent = this;
+            modificarCita.dataGridCitas.Visible = true;
             modificarCita.Show();
         }
 
         private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            EliminarCita eliminarCita = new EliminarCita();
-            eliminarCita.MdiParent = this;
-            eliminarCita.Show();
+            BuscarCitas modificarCita = new BuscarCitas();
+            modificarCita.MdiParent = this;
+            modificarCita.dataGridCitasEliminar.Visible = true;
+            modificarCita.Show();
         }
 
         private void barButtonItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -215,6 +245,38 @@ namespace ProyectoParcial2
             buscarMedicamento.Text = "Modificar Medicamento";
             buscarMedicamento.MdiParent = this;
             buscarMedicamento.Show();
+        }
+
+        private void barEditItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void ribbonControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalirMenuPrincipal_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Login nuevo = new Login();
+            this.Hide();
+            nuevo.Show();
+        }
+
+        private void barbtConsultaCitas_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            CitasAsignadas citas = new CitasAsignadas(barCargo.Caption.Trim());
+            citas.Text = "Citas Asignadas";
+            citas.MdiParent = this;
+            citas.Show();
+        }
+
+        private void barButtonItem9_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            AtencionTratamientoFrm citas = new AtencionTratamientoFrm();
+            citas.MdiParent = this;
+            citas.Show();
         }
     }
 }

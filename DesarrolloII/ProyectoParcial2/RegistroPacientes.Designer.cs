@@ -43,6 +43,7 @@
             this.txtDireccion = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtApellido = new DevExpress.XtraEditors.TextEdit();
+            this.btnGuardarCita = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtCedula.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCelular.Properties)).BeginInit();
@@ -127,6 +128,7 @@
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 22;
             this.btnSalir.Text = "Salir";
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnCancelar
             // 
@@ -166,11 +168,21 @@
             this.txtApellido.Size = new System.Drawing.Size(100, 20);
             this.txtApellido.TabIndex = 24;
             // 
+            // btnGuardarCita
+            // 
+            this.btnGuardarCita.Location = new System.Drawing.Point(30, 210);
+            this.btnGuardarCita.Name = "btnGuardarCita";
+            this.btnGuardarCita.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardarCita.TabIndex = 28;
+            this.btnGuardarCita.Text = "Insertar";
+            this.btnGuardarCita.Click += new System.EventHandler(this.btnGuardarCita_Click);
+            // 
             // RegistroPacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(528, 306);
+            this.Controls.Add(this.btnGuardarCita);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.labelControl4);
@@ -187,6 +199,7 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtCedula);
             this.Name = "RegistroPacientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.RegistroPacientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtCedula.Properties)).EndInit();
@@ -217,5 +230,6 @@
         private DevExpress.XtraEditors.TextEdit txtDireccion;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.TextEdit txtApellido;
+        public DevExpress.XtraEditors.SimpleButton btnGuardarCita;
     }
 }

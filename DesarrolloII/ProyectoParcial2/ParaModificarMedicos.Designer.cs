@@ -250,6 +250,7 @@
             this.simpleButton3.Size = new System.Drawing.Size(75, 23);
             this.simpleButton3.TabIndex = 48;
             this.simpleButton3.Text = "Salir";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // comboBoxEdit1
             // 
@@ -304,6 +305,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "ParaModificarMedicos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ParaModificarMedicos";
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();

@@ -19,6 +19,12 @@ namespace ProyectoParcial2
             InitializeComponent();
         }
 
+        public RegistroPacientes(String cedula )
+        {
+            InitializeComponent();
+            txtCedula.Text = cedula;
+        }
+
         private void appointmentLabelEdit1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -42,6 +48,16 @@ namespace ProyectoParcial2
 
 
             var resultado = PersonaTestNegocio.GuardarPacienteMensaje(pac);
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void btnGuardarCita_Click(object sender, EventArgs e)
+        {
 
         }
     }

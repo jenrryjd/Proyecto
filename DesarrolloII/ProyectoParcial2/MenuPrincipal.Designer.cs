@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
@@ -54,20 +55,44 @@
             this.btnAgregarEsp = new DevExpress.XtraBars.BarButtonItem();
             this.btnModificarEsp = new DevExpress.XtraBars.BarButtonItem();
             this.btnElimnarEsp = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.barPerfil = new DevExpress.XtraBars.BarHeaderItem();
+            this.barUsuario = new DevExpress.XtraBars.BarHeaderItem();
+            this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemZoomTrackBar1 = new DevExpress.XtraEditors.Repository.RepositoryItemZoomTrackBar();
+            this.barHeaderItem1 = new DevExpress.XtraBars.BarHeaderItem();
+            this.barCargo = new DevExpress.XtraBars.BarHeaderItem();
+            this.btnSalirMenuPrincipal = new DevExpress.XtraBars.BarButtonItem();
+            this.barbtConsultaCitas = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageCitas = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.Pacientes = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPagePacientes = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageEspecialistas = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageAdministrarTrabajo = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageAntecedentes = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.repositoryItemTimeEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit();
+            this.repositoryItemFontEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemFontEdit();
+            this.repositoryItemHyperLinkEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
+            this.repositoryItemTokenEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTokenEdit();
+            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemZoomTrackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTokenEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             this.SuspendLayout();
             // 
             // applicationMenu1
@@ -103,19 +128,37 @@
             this.barButtonItem20,
             this.btnAgregarEsp,
             this.btnModificarEsp,
-            this.btnElimnarEsp});
+            this.btnElimnarEsp,
+            this.barPerfil,
+            this.barUsuario,
+            this.barEditItem1,
+            this.barHeaderItem1,
+            this.barCargo,
+            this.btnSalirMenuPrincipal,
+            this.barbtConsultaCitas,
+            this.barButtonItem9});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 26;
+            this.ribbonControl1.MaxItemId = 46;
             this.ribbonControl1.Name = "ribbonControl1";
+            this.ribbonControl1.PageHeaderItemLinks.Add(this.btnSalirMenuPrincipal);
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage2,
-            this.Pacientes,
-            this.ribbonPage1,
-            this.ribbonPage3});
+            this.ribbonPageCitas,
+            this.ribbonPagePacientes,
+            this.ribbonPageEspecialistas,
+            this.ribbonPageAdministrarTrabajo,
+            this.ribbonPageAntecedentes});
+            this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemTimeEdit1,
+            this.repositoryItemFontEdit1,
+            this.repositoryItemHyperLinkEdit1,
+            this.repositoryItemTokenEdit1,
+            this.repositoryItemTextEdit1,
+            this.repositoryItemZoomTrackBar1});
             this.ribbonControl1.ShowToolbarCustomizeItem = false;
             this.ribbonControl1.Size = new System.Drawing.Size(926, 141);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.Toolbar.ShowCustomizeItem = false;
+            this.ribbonControl1.Click += new System.EventHandler(this.ribbonControl1_Click);
             // 
             // barButtonItem1
             // 
@@ -316,12 +359,77 @@
             this.btnElimnarEsp.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.btnElimnarEsp.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnElimnarEsp_ItemClick);
             // 
-            // ribbonPage2
+            // barPerfil
             // 
-            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.barPerfil.Caption = "barHeaderItem1";
+            this.barPerfil.Id = 37;
+            this.barPerfil.Name = "barPerfil";
+            // 
+            // barUsuario
+            // 
+            this.barUsuario.Caption = "barHeaderItem2";
+            this.barUsuario.Id = 38;
+            this.barUsuario.Name = "barUsuario";
+            // 
+            // barEditItem1
+            // 
+            this.barEditItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barEditItem1.Caption = "hola";
+            this.barEditItem1.Edit = this.repositoryItemZoomTrackBar1;
+            this.barEditItem1.Id = 40;
+            this.barEditItem1.Name = "barEditItem1";
+            this.barEditItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barEditItem1_ItemClick);
+            // 
+            // repositoryItemZoomTrackBar1
+            // 
+            this.repositoryItemZoomTrackBar1.Middle = 5;
+            this.repositoryItemZoomTrackBar1.Name = "repositoryItemZoomTrackBar1";
+            this.repositoryItemZoomTrackBar1.ScrollThumbStyle = DevExpress.XtraEditors.Repository.ScrollThumbStyle.ArrowDownRight;
+            // 
+            // barHeaderItem1
+            // 
+            this.barHeaderItem1.Caption = "CARGO:";
+            this.barHeaderItem1.Id = 41;
+            this.barHeaderItem1.Name = "barHeaderItem1";
+            // 
+            // barCargo
+            // 
+            this.barCargo.Caption = "barHeaderItem2";
+            this.barCargo.Id = 42;
+            this.barCargo.Name = "barCargo";
+            // 
+            // btnSalirMenuPrincipal
+            // 
+            this.btnSalirMenuPrincipal.Caption = "Salir";
+            this.btnSalirMenuPrincipal.Glyph = global::ProyectoParcial2.Properties.Resources.closejd;
+            this.btnSalirMenuPrincipal.Id = 43;
+            this.btnSalirMenuPrincipal.Name = "btnSalirMenuPrincipal";
+            this.btnSalirMenuPrincipal.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnSalirMenuPrincipal.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSalirMenuPrincipal_ItemClick);
+            // 
+            // barbtConsultaCitas
+            // 
+            this.barbtConsultaCitas.Caption = "Citas Medicas";
+            this.barbtConsultaCitas.Glyph = global::ProyectoParcial2.Properties.Resources.consultacita;
+            this.barbtConsultaCitas.Id = 44;
+            this.barbtConsultaCitas.Name = "barbtConsultaCitas";
+            this.barbtConsultaCitas.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)));
+            this.barbtConsultaCitas.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barbtConsultaCitas_ItemClick);
+            // 
+            // barButtonItem9
+            // 
+            this.barButtonItem9.Caption = "barButtonItem9";
+            this.barButtonItem9.Id = 45;
+            this.barButtonItem9.Name = "barButtonItem9";
+            this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem9_ItemClick_1);
+            // 
+            // ribbonPageCitas
+            // 
+            this.ribbonPageCitas.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup2});
-            this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "Citas";
+            this.ribbonPageCitas.Name = "ribbonPageCitas";
+            this.ribbonPageCitas.Text = "Citas";
             // 
             // ribbonPageGroup2
             // 
@@ -331,12 +439,12 @@
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Citas";
             // 
-            // Pacientes
+            // ribbonPagePacientes
             // 
-            this.Pacientes.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPagePacientes.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1});
-            this.Pacientes.Name = "Pacientes";
-            this.Pacientes.Text = "Pacientes";
+            this.ribbonPagePacientes.Name = "ribbonPagePacientes";
+            this.ribbonPagePacientes.Text = "Pacientes";
             // 
             // ribbonPageGroup1
             // 
@@ -346,13 +454,13 @@
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Pacientes";
             // 
-            // ribbonPage1
+            // ribbonPageEspecialistas
             // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageEspecialistas.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup3,
             this.ribbonPageGroup7});
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Especialistas";
+            this.ribbonPageEspecialistas.Name = "ribbonPageEspecialistas";
+            this.ribbonPageEspecialistas.Text = "Especialistas";
             // 
             // ribbonPageGroup3
             // 
@@ -370,14 +478,28 @@
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             this.ribbonPageGroup7.Text = "Especialidad";
             // 
-            // ribbonPage3
+            // ribbonPageAdministrarTrabajo
             // 
-            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageAdministrarTrabajo.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup8});
+            this.ribbonPageAdministrarTrabajo.Name = "ribbonPageAdministrarTrabajo";
+            this.ribbonPageAdministrarTrabajo.Text = "Atencion Medica";
+            // 
+            // ribbonPageGroup8
+            // 
+            this.ribbonPageGroup8.ItemLinks.Add(this.barbtConsultaCitas);
+            this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem9);
+            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            this.ribbonPageGroup8.Text = "ribbonPageGroup8";
+            // 
+            // ribbonPageAntecedentes
+            // 
+            this.ribbonPageAntecedentes.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup4,
             this.ribbonPageGroup6,
             this.ribbonPageGroup5});
-            this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "Antecedentes y Medicamentos";
+            this.ribbonPageAntecedentes.Name = "ribbonPageAntecedentes";
+            this.ribbonPageAntecedentes.Text = "Antecedentes y Medicamentos";
             // 
             // ribbonPageGroup4
             // 
@@ -403,12 +525,52 @@
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "Medicamentos";
             // 
+            // repositoryItemTimeEdit1
+            // 
+            this.repositoryItemTimeEdit1.AutoHeight = false;
+            this.repositoryItemTimeEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemTimeEdit1.Name = "repositoryItemTimeEdit1";
+            // 
+            // repositoryItemFontEdit1
+            // 
+            this.repositoryItemFontEdit1.AutoHeight = false;
+            this.repositoryItemFontEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemFontEdit1.Name = "repositoryItemFontEdit1";
+            // 
+            // repositoryItemHyperLinkEdit1
+            // 
+            this.repositoryItemHyperLinkEdit1.AutoHeight = false;
+            this.repositoryItemHyperLinkEdit1.Name = "repositoryItemHyperLinkEdit1";
+            // 
+            // repositoryItemTokenEdit1
+            // 
+            this.repositoryItemTokenEdit1.Name = "repositoryItemTokenEdit1";
+            // 
+            // repositoryItemTextEdit1
+            // 
+            this.repositoryItemTextEdit1.AutoHeight = false;
+            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
+            // 
             // ribbonStatusBar1
             // 
+            this.ribbonStatusBar1.ItemLinks.Add(this.barPerfil);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barUsuario);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barEditItem1);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barHeaderItem1);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barCargo);
             this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 502);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
             this.ribbonStatusBar1.Size = new System.Drawing.Size(926, 27);
+            // 
+            // imageCollection1
+            // 
+            this.imageCollection1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection1.ImageStream")));
+            this.imageCollection1.Images.SetKeyName(0, "1.png");
+            this.imageCollection1.Images.SetKeyName(1, "2.jpg");
+            this.imageCollection1.Images.SetKeyName(2, "3.png");
             // 
             // MenuPrincipal
             // 
@@ -424,6 +586,13 @@
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemZoomTrackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTokenEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -434,10 +603,8 @@
         private DevExpress.XtraBars.Ribbon.ApplicationMenu applicationMenu1;
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.Ribbon.RibbonPage Pacientes;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
@@ -449,7 +616,6 @@
         private DevExpress.XtraBars.BarButtonItem btnAgrMedicos;
         private DevExpress.XtraBars.BarButtonItem btnModMedico;
         private DevExpress.XtraBars.BarButtonItem btnEliMedico;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem12;
         private DevExpress.XtraBars.BarButtonItem barButtonItem13;
@@ -464,9 +630,29 @@
         private DevExpress.XtraBars.BarButtonItem btnModificarEsp;
         private DevExpress.XtraBars.BarButtonItem btnElimnarEsp;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit repositoryItemTimeEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemFontEdit repositoryItemFontEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit repositoryItemHyperLinkEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTokenEdit repositoryItemTokenEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
+        private DevExpress.XtraBars.BarHeaderItem barPerfil;
+        private DevExpress.XtraBars.BarHeaderItem barUsuario;
+        private DevExpress.XtraBars.BarEditItem barEditItem1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemZoomTrackBar repositoryItemZoomTrackBar1;
+        public DevExpress.XtraBars.Ribbon.RibbonPage ribbonPagePacientes;
+        public DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageCitas;
+        public DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageEspecialistas;
+        public DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageAntecedentes;
+        public DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageAdministrarTrabajo;
+        private DevExpress.XtraBars.BarHeaderItem barHeaderItem1;
+        private DevExpress.XtraBars.BarButtonItem btnSalirMenuPrincipal;
+        private DevExpress.Utils.ImageCollection imageCollection1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
+        public DevExpress.XtraBars.BarHeaderItem barCargo;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
+        public DevExpress.XtraBars.BarButtonItem barbtConsultaCitas;
     }
 }

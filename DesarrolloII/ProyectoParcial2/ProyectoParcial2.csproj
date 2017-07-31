@@ -55,6 +55,7 @@
     <Reference Include="DevExpress.XtraReports.v15.1.Extensions, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraScheduler.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -87,6 +88,12 @@
     <Compile Include="AlergiasFrm.Designer.cs">
       <DependentUpon>AlergiasFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AtencionTratamientoFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AtencionTratamientoFrm.Designer.cs">
+      <DependentUpon>AtencionTratamientoFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BuscarAlergia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +117,12 @@
     </Compile>
     <Compile Include="BuscarMedicamento.Designer.cs">
       <DependentUpon>BuscarMedicamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CitasAsignadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CitasAsignadas.Designer.cs">
+      <DependentUpon>CitasAsignadas.cs</DependentUpon>
     </Compile>
     <Compile Include="EliminarCita.cs">
       <SubType>Form</SubType>
@@ -192,6 +205,9 @@
     <EmbeddedResource Include="AlergiasFrm.resx">
       <DependentUpon>AlergiasFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AtencionTratamientoFrm.resx">
+      <DependentUpon>AtencionTratamientoFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BuscarAlergia.resx">
       <DependentUpon>BuscarAlergia.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BuscarMedicamento.resx">
       <DependentUpon>BuscarMedicamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CitasAsignadas.resx">
+      <DependentUpon>CitasAsignadas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarCita.resx">
       <DependentUpon>EliminarCita.cs</DependentUpon>
@@ -366,6 +385,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\salir.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginIngresar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginCancelar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consultacita.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

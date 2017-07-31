@@ -47,13 +47,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlergiaNegocio.cs" />
+    <Compile Include="AtencionTratamientoNegocio.cs" />
     <Compile Include="CitaNegocio.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="EnfermedadNegocio.cs" />
     <Compile Include="EspecialidadNegocio.cs" />
+    <Compile Include="HistoriaMedicaNegocio.cs" />
+    <Compile Include="LoginNegocio.cs" />
     <Compile Include="MedicamentoNegocio.cs" />
     <Compile Include="PersonaTestNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecetaNegocio.cs" />
+    <Compile Include="SignosNegocio.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

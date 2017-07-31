@@ -91,5 +91,10 @@ namespace ProyectoParcial2
         {
 
         }
+
+        private void txtRazonBuscar_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
