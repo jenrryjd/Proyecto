@@ -55,6 +55,8 @@
     <Reference Include="DevExpress.XtraReports.v15.1.Extensions, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraScheduler.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -87,11 +89,39 @@
     <Compile Include="AlergiasFrm.Designer.cs">
       <DependentUpon>AlergiasFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Asistidas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Asistidas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BuscarAlergia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BuscarAlergia.Designer.cs">
       <DependentUpon>BuscarAlergia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarCitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarCitas.Designer.cs">
+      <DependentUpon>BuscarCitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarEnfermedades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarEnfermedades.Designer.cs">
+      <DependentUpon>BuscarEnfermedades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarMedicamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarMedicamento.Designer.cs">
+      <DependentUpon>BuscarMedicamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CitaFecha.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CitaFecha.xsd</DependentUpon>
     </Compile>
     <Compile Include="EliminarCita.cs">
       <SubType>Form</SubType>
@@ -99,17 +129,11 @@
     <Compile Include="EliminarCita.Designer.cs">
       <DependentUpon>EliminarCita.cs</DependentUpon>
     </Compile>
-    <Compile Include="EliminarMedico.cs">
+    <Compile Include="EnfermedadesFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EliminarMedico.Designer.cs">
-      <DependentUpon>EliminarMedico.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EliminarPacientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EliminarPacientes.Designer.cs">
-      <DependentUpon>EliminarPacientes.cs</DependentUpon>
+    <Compile Include="EnfermedadesFrm.Designer.cs">
+      <DependentUpon>EnfermedadesFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Especialidad.cs">
       <SubType>Form</SubType>
@@ -123,6 +147,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="MedicamentoFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicamentoFrm.Designer.cs">
+      <DependentUpon>MedicamentoFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Medicos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,12 +160,6 @@
       <DependentUpon>Medicos.cs</DependentUpon>
     </Compile>
     <Compile Include="MetodosBasicos.cs" />
-    <Compile Include="ModificarCita.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModificarCita.Designer.cs">
-      <DependentUpon>ModificarCita.cs</DependentUpon>
-    </Compile>
     <Compile Include="ModificarMedicos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,17 +172,17 @@
     <Compile Include="ModificarPacientes.Designer.cs">
       <DependentUpon>ModificarPacientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="ParaModificarMedicos.cs">
+    <Compile Include="PMMedicos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ParaModificarMedicos.Designer.cs">
-      <DependentUpon>ParaModificarMedicos.cs</DependentUpon>
+    <Compile Include="PMMedicos.Designer.cs">
+      <DependentUpon>PMMedicos.cs</DependentUpon>
     </Compile>
-    <Compile Include="ParaModificarPaciente.cs">
+    <Compile Include="PMPacientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ParaModificarPaciente.Designer.cs">
-      <DependentUpon>ParaModificarPaciente.cs</DependentUpon>
+    <Compile Include="PMPacientes.Designer.cs">
+      <DependentUpon>PMPacientes.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistroPacientes.cs">
       <SubType>Form</SubType>
@@ -174,6 +198,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReporteCitaFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteCitaFecha.Designer.cs">
+      <DependentUpon>ReporteCitaFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportesEstado.Designer.cs">
+      <DependentUpon>ReportesEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignoVitalnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignoVitalnter.Designer.cs">
+      <DependentUpon>SignoVitalnter.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AgendarCita.resx">
       <DependentUpon>AgendarCita.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,14 +225,20 @@
     <EmbeddedResource Include="BuscarAlergia.resx">
       <DependentUpon>BuscarAlergia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BuscarCitas.resx">
+      <DependentUpon>BuscarCitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarEnfermedades.resx">
+      <DependentUpon>BuscarEnfermedades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarMedicamento.resx">
+      <DependentUpon>BuscarMedicamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EliminarCita.resx">
       <DependentUpon>EliminarCita.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EliminarMedico.resx">
-      <DependentUpon>EliminarMedico.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EliminarPacientes.resx">
-      <DependentUpon>EliminarPacientes.cs</DependentUpon>
+    <EmbeddedResource Include="EnfermedadesFrm.resx">
+      <DependentUpon>EnfermedadesFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Especialidad.resx">
       <DependentUpon>Especialidad.cs</DependentUpon>
@@ -198,14 +246,14 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MedicamentoFrm.resx">
+      <DependentUpon>MedicamentoFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Medicos.resx">
       <DependentUpon>Medicos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModificarCita.resx">
-      <DependentUpon>ModificarCita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarMedicos.resx">
       <DependentUpon>ModificarMedicos.cs</DependentUpon>
@@ -213,11 +261,11 @@
     <EmbeddedResource Include="ModificarPacientes.resx">
       <DependentUpon>ModificarPacientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ParaModificarMedicos.resx">
-      <DependentUpon>ParaModificarMedicos.cs</DependentUpon>
+    <EmbeddedResource Include="PMMedicos.resx">
+      <DependentUpon>PMMedicos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ParaModificarPaciente.resx">
-      <DependentUpon>ParaModificarPaciente.cs</DependentUpon>
+    <EmbeddedResource Include="PMPacientes.resx">
+      <DependentUpon>PMPacientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -233,6 +281,39 @@
     <EmbeddedResource Include="RegistroPacientes.resx">
       <DependentUpon>RegistroPacientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="ReportCitas.rdlc" />
+    <EmbeddedResource Include="ReporteCitaFecha.resx">
+      <DependentUpon>ReporteCitaFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesEstado.resx">
+      <DependentUpon>ReportesEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignoVitalnter.resx">
+      <DependentUpon>SignoVitalnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Asistidas.xsc">
+      <DependentUpon>Asistidas.xsd</DependentUpon>
+    </None>
+    <None Include="Asistidas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Asistidas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Asistidas.xss">
+      <DependentUpon>Asistidas.xsd</DependentUpon>
+    </None>
+    <None Include="CitaFecha.xsc">
+      <DependentUpon>CitaFecha.xsd</DependentUpon>
+    </None>
+    <None Include="CitaFecha.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CitaFecha.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CitaFecha.xss">
+      <DependentUpon>CitaFecha.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

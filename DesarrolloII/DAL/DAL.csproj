@@ -34,9 +34,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,18 +49,26 @@
   <ItemGroup>
     <Compile Include="Alergias.cs" />
     <Compile Include="AlergiasBuscar.cs" />
+    <Compile Include="BuscarEspecialidadDAL.cs" />
+    <Compile Include="BuscarSignosVitalesDAL.cs" />
+    <Compile Include="Cita.cs" />
+    <Compile Include="CitasBuscar.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="ConexionClinica.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>ConexionClinica.settings</DependentUpon>
     </Compile>
+    <Compile Include="EnfermedadBuscar.cs" />
+    <Compile Include="Enfermedades.cs" />
     <Compile Include="EspecialidadDAL.cs" />
-    <Compile Include="EspecialidadesBuscar.cs" />
-    <Compile Include="MedicoBuscar.cs" />
-    <Compile Include="PacienteBuscar.cs" />
+    <Compile Include="Medicamentos.cs" />
+    <Compile Include="MedicamentosBuscar.cs" />
+    <Compile Include="MedicosBuscarDAL.cs" />
+    <Compile Include="PacientesBuscarDAL.cs" />
     <Compile Include="PersonaTestDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SigninoVitalDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

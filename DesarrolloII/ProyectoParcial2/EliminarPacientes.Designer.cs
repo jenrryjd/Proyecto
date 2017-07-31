@@ -70,7 +70,6 @@
             "Apellido"});
             this.cmbEliminarPac.Size = new System.Drawing.Size(162, 20);
             this.cmbEliminarPac.TabIndex = 24;
-            this.cmbEliminarPac.SelectedIndexChanged += new System.EventHandler(this.cmbEliminarPac_SelectedIndexChanged);
             // 
             // label2
             // 

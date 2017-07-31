@@ -89,6 +89,7 @@
             this.dataGridMedicamentos.Size = new System.Drawing.Size(555, 193);
             this.dataGridMedicamentos.TabIndex = 33;
             this.dataGridMedicamentos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridMedicamentos_CellClick);
+            this.dataGridMedicamentos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridMedicamentos_CellContentClick);
             // 
             // lblBuscarPor
             // 
@@ -111,6 +112,7 @@
             this.Controls.Add(this.dataGridMedicamentos);
             this.Controls.Add(this.lblBuscarPor);
             this.Name = "BuscarMedicamento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BuscarMedicamento";
             this.Load += new System.EventHandler(this.BuscarMedicamento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtRazonBuscar.Properties)).EndInit();

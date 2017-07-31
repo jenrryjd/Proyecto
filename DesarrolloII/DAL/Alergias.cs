@@ -7,6 +7,7 @@ using MENSAJES;
 using System.Data.SqlClient;
 using System.Transactions;
 using System.Data;
+using DevExpress.XtraEditors;
 
 namespace DAL
 {
@@ -56,6 +57,68 @@ namespace DAL
                     connection.Close();
                     scope.Complete();
                     return alergiaActualizar;
+                }
+            }
+        }
+
+
+        public static void CargarTipoBox(ComboBoxEdit cmbTipo)
+        {
+            using (TransactionScope scope = new TransactionScope())
+            {
+                using (SqlConnection connection = new SqlConnection(ConexionClinica.Default.Conexion))
+                {
+                    connection.Open();
+                    string queryString = "SELECT [NOMBRE_TIPO] FROM[dbo].[TIPOALERGIA]";
+                    SqlCommand cmd = new SqlCommand(queryString, connection);
+                    var dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        cmbTipo.Properties.Items.Add(dr["NOMBRE_TIPO"].ToString());
+                    }
+                    dr.Close();
+                }
+            }
+        }
+
+        public static AlergiaMensajes InsertarTipo(string tipo)
+        {
+            using (TransactionScope scope = new TransactionScope())
+            {
+                using (SqlConnection connection = new SqlConnection(ConexionClinica.Default.Conexion))
+                {
+                    connection.Open();
+                    string queryString = "INSERT INTO [dbo].[TIPOALERGIA] ([NOMBRE_TIPO]) VALUES (@tipo); SELECT SCOPE_IDENTITY()";
+                    SqlCommand cmd = new SqlCommand(queryString, connection);
+                    cmd.Parameters.AddWithValue("@tipo", tipo);
+
+                    var IdAlergia = cmd.ExecuteScalar();
+                    //AlergiaInsertar.Id = Convert.ToInt32(IdAlergia);
+
+                    connection.Close();
+                    scope.Complete();
+                    return null;
+                }
+            }
+        }
+
+        public static AlergiaMensajes Eliminar(AlergiaMensajes alergiaEliminar)
+        {
+            using (TransactionScope scope = new TransactionScope())
+            {
+                using (SqlConnection connection = new SqlConnection(ConexionClinica.Default.Conexion))
+                {
+                    connection.Open();
+                    string queryString = "DELETE [Clinica].[dbo].[ALERGIA] WHERE [ID_ALER]=@id;";
+                    SqlCommand cmd = new SqlCommand(queryString, connection);
+                    cmd.Parameters.AddWithValue("@id", alergiaEliminar.Id);
+
+                    cmd.ExecuteScalar();
+                    // alergiaActualizar.Id = Convert.ToInt32(IdAlergia);
+
+                    connection.Close();
+                    scope.Complete();
+                    return alergiaEliminar;
                 }
             }
         }

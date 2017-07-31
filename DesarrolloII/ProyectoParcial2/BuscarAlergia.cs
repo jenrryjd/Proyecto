@@ -19,11 +19,6 @@ namespace ProyectoParcial2
             InitializeComponent();
         }
 
-        private void dataGridAlergias_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
         private void BuscarAlergia_Load(object sender, EventArgs e)
         {
             MetodosBasicos.CargarTabla(dataGridAlergias);
@@ -32,39 +27,15 @@ namespace ProyectoParcial2
         private void cmbRazonSocial_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbRazonSocial.SelectedText.Equals("Codigo Alergia"))
-                lblBuscarPor.Text = "Codigo Alergia";
+                lblBuscarPor.Text = "Codigo Alergia";            
             if (cmbRazonSocial.SelectedText.Equals("Nombre"))
                 lblBuscarPor.Text = "Nombre: ";
             if (cmbRazonSocial.SelectedText.Equals("Tipo"))
                 lblBuscarPor.Text = "Tipo: ";
+
+            txtRazonBuscar.Enabled = true;
         }
 
-        private void txtRazonBuscar_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (cmbRazonSocial.SelectedText.Equals("Codigo Alergia"))
-            {
-                AlergiaNegocio obj = new AlergiaNegocio();
-                var lista = obj.DevolverListaAlergiaId(txtRazonBuscar.Text);
-                dataGridAlergias.DataSource = lista.Tables[0];
-            }
-            if (cmbRazonSocial.SelectedText.Equals("Nombre"))
-            {
-                AlergiaNegocio obj = new AlergiaNegocio();
-                var lista = obj.DevolverListaAlergiaNombre(txtRazonBuscar.Text);
-                dataGridAlergias.DataSource = lista.Tables[0];
-            }
-            if (cmbRazonSocial.SelectedText.Equals("Tipo"))
-            {
-                AlergiaNegocio obj = new AlergiaNegocio();
-                var lista = obj.DevolverListaAlergiaTipo(txtRazonBuscar.Text);
-                dataGridAlergias.DataSource = lista.Tables[0];
-            }
-        }
-
-        private void txtRazonBuscar_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void dataGridAlergias_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
@@ -77,22 +48,50 @@ namespace ProyectoParcial2
 
             AlergiasFrm modificar = new AlergiasFrm(paso);
             this.Hide();
-            modificar.Text = "Actualizar Alergia";
+            modificar.Text = "Modificar Alergia";
             modificar.MdiParent = MenuPrincipal.ActiveForm;
             modificar.btnActualizar.Visible = true;
             modificar.btnCancelarActualizacion.Visible = true;
             modificar.btnInsertar.Visible = false;
+            modificar.dataGridAlergias.Visible = true;
+            modificar.dataGridAlergias.Enabled = false;
+            modificar.btnSalir.Visible = false;
+            modificar.txtNombre.Visible = true;
             modificar.Show();
-        }
-
-        private void dataGridAlergias_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void txtRazonBuscar_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (cmbRazonSocial.SelectedText.Equals("Codigo Alergia"))
+            {
+                MetodosBasicos.SoloNumerosEnteros(e);
+                AlergiaNegocio obj = new AlergiaNegocio();
+                var lista = obj.DevolverListaAlergiaId(txtRazonBuscar.Text);
+                dataGridAlergias.DataSource = lista.Tables[0];
+            }
+            if (cmbRazonSocial.SelectedText.Equals("Nombre"))
+            {
+                MetodosBasicos.SoloLetras(e);
+                AlergiaNegocio obj = new AlergiaNegocio();
+                var lista = obj.DevolverListaAlergiaNombre(txtRazonBuscar.Text);
+                dataGridAlergias.DataSource = lista.Tables[0];
+            }
+            if (cmbRazonSocial.SelectedText.Equals("Tipo"))
+            {
+                AlergiaNegocio obj = new AlergiaNegocio();
+                var lista = obj.DevolverListaAlergiaTipo(txtRazonBuscar.Text);
+                dataGridAlergias.DataSource = lista.Tables[0];
+            }
+        }
+
+        private void dataGridAlergias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

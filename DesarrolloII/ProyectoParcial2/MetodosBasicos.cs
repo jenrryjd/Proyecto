@@ -18,31 +18,56 @@ namespace ProyectoParcial2
             AlergiaNegocio datosTablaAlergias = new AlergiaNegocio();
             var listaAlergias = datosTablaAlergias.DevolverListaAlergias().Tables[0];
             tabla.DataSource = listaAlergias;
+            
         }
-
+    
         internal static void CargarTablaEnfermedades(DataGridView tabla)
         {
-            PersonaTestNegocio perso = new PersonaTestNegocio();
-            var listaPesonas = perso.DevolverListaPaciente().Tables[0];
-            tabla.DataSource = listaPesonas;
+            EnfermedadNegocio datosTablaEnfermedades = new EnfermedadNegocio();
+            var listaEnfermedad = datosTablaEnfermedades.DevolverListaEnfermedad().Tables[0];
+            tabla.DataSource = listaEnfermedad;
+
         }
 
-        internal static void CargarTablaMedico(DataGridView tabla)
+        internal static void CargarBoxEspecialidad(ComboBoxEdit cmbEspecialidad)
         {
-            PersonaTestNegocio perso = new PersonaTestNegocio();
-            var listaPesonas = perso.DevolverListaMedico().Tables[0];
-            tabla.DataSource = listaPesonas;
+            EspecialidadNegocio agregarbox = new EspecialidadNegocio();
+            agregarbox.cargarDatosBoxEspecialidad(cmbEspecialidad);
         }
+
+        internal static void CargarBoxEspecialidad2(ComboBoxEdit cmbEspecialidad)
+        {
+            EspecialidadNegocio agregarbox = new EspecialidadNegocio();
+            agregarbox.cargarDatosBoxEspecialidad1(cmbEspecialidad);
+        }
+
+        internal static void CargarBox(ComboBoxEdit cmbTipo)
+        {
+            EnfermedadNegocio agregarbox = new EnfermedadNegocio();
+            agregarbox.cargarDatosBox(cmbTipo);
+        }
+
+        internal static void CargarTablaMedicamentos(DataGridView dataGridMedicamento)
+        {
+            MedicamentoNegocio datosTablaMedicamentos = new MedicamentoNegocio();
+            var listaEnfermedad = datosTablaMedicamentos.DevolverListaMedicamentos().Tables[0];
+            dataGridMedicamento.DataSource = listaEnfermedad;
+        }
+
+        internal static void CargarBoxAler(ComboBoxEdit cmbTipo)
+        {
+            AlergiaNegocio agregarbox = new AlergiaNegocio();
+            agregarbox.cargarDatosBox(cmbTipo);
+        }
+
+       
+
+
 
         internal static void CargarBoxMedi(ComboBoxEdit cmbTipo)
         {
             MedicamentoNegocio agregarbox = new MedicamentoNegocio();
             agregarbox.cargarDatosBox(cmbTipo);
-        }
-
-        internal static void CargarTablaPacientes(DataGridView dataGridPacientes)
-        {
-            throw new NotImplementedException();
         }
 
         internal static void SoloLetras(KeyPressEventArgs e)
@@ -71,6 +96,28 @@ namespace ProyectoParcial2
             {
                 e.Handled = true;
             }
+        }
+
+        internal static void CargarTablaMedicos(DataGridView tabla)
+        {
+            PersonaTestNegocio datosTablaMedico = new PersonaTestNegocio();
+            var listaEnfermedad = datosTablaMedico.DevolverListaMedicos().Tables[0];
+            tabla.DataSource = listaEnfermedad;
+
+        }
+        internal static void CargarTablaPaciente(DataGridView tabla)
+        {
+            PersonaTestNegocio datosTablaPaciente = new PersonaTestNegocio();
+            var listaEnfermedad = datosTablaPaciente.DevolverListaPacientes().Tables[0];
+            tabla.DataSource = listaEnfermedad;
+
+        }
+        internal static void CargarTablaEspecialidades(DataGridView tabla)
+        {
+            EspecialidadNegocio datosTablaAlergias = new EspecialidadNegocio();
+            var listaAlergias = datosTablaAlergias.DevolverListaEspecialidades().Tables[0];
+            tabla.DataSource = listaAlergias;
+
         }
     }
 }

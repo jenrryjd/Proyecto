@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MENSAJES;
 using DAL;
+using DevExpress.XtraEditors;
 using System.Data;
 
 namespace NEGOCIO
@@ -18,6 +19,47 @@ namespace NEGOCIO
             return ms;
         }
 
+     
+
+        public object DevolverNombrePaciente(string text)
+        {
+            string ms = PersonaTestDAL.ConsultaNombre(text);
+            return ms;
+        }
+
+        public void CargarDoctores(string especialidad, TextEdit txtCedDoc, TextEdit txtNomDoc)
+        {
+            PersonaTestDAL.CargaDoctores(especialidad, txtCedDoc, txtNomDoc);
+        }
+
+        public DataSet DevolverListaMedicos()
+        {
+            return PersonaTestDAL.CargarListaDatosMedicosPacientes(MedicosBuscarDAL.DevuelveListaMedicos());
+        }
+        public DataSet DevolverListaMedicosCedula(string idMedico)
+        {
+            return PersonaTestDAL.CargarListaDatosMedicosPacientes(MedicosBuscarDAL.DevuelveListaCedulaMedicos(idMedico));
+        }
+        public DataSet DevolverListaMedicosNombre(string NombreMedico)
+        {
+            return PersonaTestDAL.CargarListaDatosMedicosPacientes(MedicosBuscarDAL.DevuelveListaNombreMedicos(NombreMedico));
+        }
+        public DataSet DevolverListaMedicosApellido(string ApellidoMedico)
+        {
+            return PersonaTestDAL.CargarListaDatosMedicosPacientes(MedicosBuscarDAL.DevuelveListaApellidoMedicos(ApellidoMedico));
+        }
+
+
+        public DataSet DevolverListaPacientes()
+        {
+            return PersonaTestDAL.CargarListaDatosMedicosPacientes(PacientesBuscarDAL.DevuelveListaPacientes());
+        }
+
+        public DataSet DevolverListaPacientesCedula(string idPaciente)
+        {
+            return PersonaTestDAL.CargarListaDatosMedicosPacientes(PacientesBuscarDAL.DevuelveListaCedulaPacientes(idPaciente));
+        }
+
         public static object GuardarPacienteMensaje(PacienteMensaje paciente)
         {
             PacienteMensaje md = new PacienteMensaje();
@@ -25,82 +67,47 @@ namespace NEGOCIO
             return md;
         }
 
-        public static object ActualizarPaciente(PacienteMensaje pacienteActualizar)
+
+        public static object ModificarPaciente(PacienteMensaje actualizarPaciente)
         {
+          
             PacienteMensaje ms = new PacienteMensaje();
-            ms = PersonaTestDAL.ActualizarPaciente(pacienteActualizar);
+            ms = PersonaTestDAL.ActualizarPaciente(actualizarPaciente);
+
             return ms;
-        }
-
-        public static object EliminarrPaciente(PacienteMensaje pacienteEliminar)
+    }
+        public static object ModificarMedico(MedicoMensaje actualizarMedico)
         {
-            PacienteMensaje ms = new PacienteMensaje();
-            ms = PersonaTestDAL.Eliminar(pacienteEliminar);
-            return ms;
-        }
 
-   
-
-        public static object ActualizarMedico(MedicoMensaje medicoActualizar)
-        {
             MedicoMensaje ms = new MedicoMensaje();
-            ms = PersonaTestDAL.ActualizarMedico(medicoActualizar);
+            ms = PersonaTestDAL.ActualizarMedico(actualizarMedico);
+
+            return ms;
+        }
+
+        public DataSet DevolverListaPacienteNombre(string NombrePaciente)
+        {
+            return PersonaTestDAL.CargarListaDatosMedicosPacientes(PacientesBuscarDAL.DevuelveListaNombrePacientes(NombrePaciente));
+        }
+
+        public DataSet DevolverListaPacienteApellido(string ApellidoPaciente)
+        {
+            return PersonaTestDAL.CargarListaDatosMedicosPacientes(PacientesBuscarDAL.DevuelveListaApellidoPacientes(ApellidoPaciente));
+        }
+
+        public static object EliminarPaciente(PacienteMensaje pacienteEliminar)
+        {
+            PacienteMensaje ms = new PacienteMensaje();
+            ms = PersonaTestDAL.EliminarPac(pacienteEliminar);
             return ms;
         }
 
         public static object EliminarMedico(MedicoMensaje medicoEliminar)
         {
             MedicoMensaje ms = new MedicoMensaje();
-            ms = PersonaTestDAL.EliminarMedico(medicoEliminar);
+            ms = PersonaTestDAL.EliminarMed(medicoEliminar);
             return ms;
         }
 
-        public DataSet DevolverListaMedico()
-        {
-            return Alergias.CargarListaDatos(MedicoBuscar.DevuelveListaMedicosCompleta());
-        }
-
-        public DataSet DevolverListaCedulaMed(string cedula)
-        {
-            return Alergias.CargarListaDatos(MedicoBuscar.DevuelveListaPorCedula(cedula));
-        }
-
-        public DataSet DevolverListaMedNombre(string nombre)
-        {
-            return Alergias.CargarListaDatos(MedicoBuscar.DevuelveListaPorNombre(nombre));
-        }
-
-        public DataSet DevolverListaMedApellido(string apellido)
-        {
-            return Alergias.CargarListaDatos(MedicoBuscar.DevuelveListaPorApellido(apellido));
-        }
-
-
-
-
-
-
-
-        public DataSet DevolverListaPaciente()
-        {
-            return Alergias.CargarListaDatos(PacienteBuscar.DevuelveListaPacientesCompleta());
-        }
-
-        public DataSet DevolverListaCedula(string cedula)
-        {
-            return Alergias.CargarListaDatos(PacienteBuscar.DevuelveListaPorCedula(cedula));
-        }
-
-        public DataSet DevolverListaPacienteNombre(string nombre)
-        {
-            return Alergias.CargarListaDatos(PacienteBuscar.DevuelveListaPorNombre(nombre));
-        }
-
-        public DataSet DevolverListaPacienteApellido(string apellido)
-        {
-            return Alergias.CargarListaDatos(PacienteBuscar.DevuelveListaPorApellido(apellido));
-        }
-
-     
     }
 }

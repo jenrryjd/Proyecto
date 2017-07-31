@@ -28,44 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblTituloBusqueda = new System.Windows.Forms.Label();
-            this.dataGridMedicos = new System.Windows.Forms.DataGridView();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.lblEtiqueta = new System.Windows.Forms.Label();
+            this.dataGridMedico = new System.Windows.Forms.DataGridView();
+            this.btnSalir = new DevExpress.XtraEditors.SimpleButton();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBuscar = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.textBuscare = new DevExpress.XtraEditors.TextEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridMedicos)).BeginInit();
+            this.btnEliminarModMed = new DevExpress.XtraEditors.SimpleButton();
+            this.txtBuscar = new DevExpress.XtraEditors.TextEdit();
+            this.dataGridElimanrMedico = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridMedico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBuscar.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBuscare.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBuscar.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridElimanrMedico)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblTituloBusqueda
+            // lblEtiqueta
             // 
-            this.lblTituloBusqueda.AutoSize = true;
-            this.lblTituloBusqueda.Location = new System.Drawing.Point(43, 75);
-            this.lblTituloBusqueda.Name = "lblTituloBusqueda";
-            this.lblTituloBusqueda.Size = new System.Drawing.Size(43, 13);
-            this.lblTituloBusqueda.TabIndex = 2;
-            this.lblTituloBusqueda.Text = "Cedula:";
+            this.lblEtiqueta.AutoSize = true;
+            this.lblEtiqueta.Location = new System.Drawing.Point(43, 75);
+            this.lblEtiqueta.Name = "lblEtiqueta";
+            this.lblEtiqueta.Size = new System.Drawing.Size(33, 13);
+            this.lblEtiqueta.TabIndex = 2;
+            this.lblEtiqueta.Text = "Dato:";
             // 
-            // dataGridMedicos
+            // dataGridMedico
             // 
-            this.dataGridMedicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridMedicos.Location = new System.Drawing.Point(12, 125);
-            this.dataGridMedicos.Name = "dataGridMedicos";
-            this.dataGridMedicos.Size = new System.Drawing.Size(520, 193);
-            this.dataGridMedicos.TabIndex = 6;
-            this.dataGridMedicos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridMedicos_CellClick);
-            this.dataGridMedicos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridMedicos_CellContentClick);
+            this.dataGridMedico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridMedico.Location = new System.Drawing.Point(12, 125);
+            this.dataGridMedico.Name = "dataGridMedico";
+            this.dataGridMedico.Size = new System.Drawing.Size(520, 193);
+            this.dataGridMedico.TabIndex = 6;
+            this.dataGridMedico.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // simpleButton2
+            // btnSalir
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(446, 343);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton2.TabIndex = 8;
-            this.simpleButton2.Text = "Salir";
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            this.btnSalir.Location = new System.Drawing.Point(446, 343);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 8;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // label2
             // 
@@ -88,44 +90,70 @@
             "Apellido"});
             this.comboBuscar.Size = new System.Drawing.Size(127, 20);
             this.comboBuscar.TabIndex = 10;
-            this.comboBuscar.SelectedIndexChanged += new System.EventHandler(this.comboBoxEdit1_SelectedIndexChanged);
+            this.comboBuscar.SelectedIndexChanged += new System.EventHandler(this.comboBuscar_SelectedIndexChanged);
             // 
-            // textBuscare
+            // btnEliminarModMed
             // 
-            this.textBuscare.Location = new System.Drawing.Point(116, 72);
-            this.textBuscare.Name = "textBuscare";
-            this.textBuscare.Size = new System.Drawing.Size(127, 20);
-            this.textBuscare.TabIndex = 12;
-            this.textBuscare.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textEdit1_KeyPress);
+            this.btnEliminarModMed.Location = new System.Drawing.Point(76, 343);
+            this.btnEliminarModMed.Name = "btnEliminarModMed";
+            this.btnEliminarModMed.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarModMed.TabIndex = 11;
+            this.btnEliminarModMed.Text = "Eliminar";
+            this.btnEliminarModMed.Click += new System.EventHandler(this.btnEliminarModMed_Click);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(116, 72);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(127, 20);
+            this.txtBuscar.TabIndex = 12;
+            this.txtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscar_KeyPress);
+            // 
+            // dataGridElimanrMedico
+            // 
+            this.dataGridElimanrMedico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridElimanrMedico.Location = new System.Drawing.Point(12, 125);
+            this.dataGridElimanrMedico.Name = "dataGridElimanrMedico";
+            this.dataGridElimanrMedico.Size = new System.Drawing.Size(520, 193);
+            this.dataGridElimanrMedico.TabIndex = 13;
+            this.dataGridElimanrMedico.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridElimanrMedico_CellClick);
             // 
             // ModificarMedicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(544, 379);
-            this.Controls.Add(this.textBuscare);
+            this.Controls.Add(this.dataGridElimanrMedico);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.btnEliminarModMed);
             this.Controls.Add(this.comboBuscar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.dataGridMedicos);
-            this.Controls.Add(this.lblTituloBusqueda);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.dataGridMedico);
+            this.Controls.Add(this.lblEtiqueta);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ModificarMedicos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ModificarMedicos";
             this.Load += new System.EventHandler(this.ModificarMedicos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridMedicos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridMedico)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBuscar.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBuscare.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBuscar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridElimanrMedico)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label lblTituloBusqueda;
-        private System.Windows.Forms.DataGridView dataGridMedicos;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private System.Windows.Forms.Label lblEtiqueta;
+        private DevExpress.XtraEditors.SimpleButton btnSalir;
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.ComboBoxEdit comboBuscar;
-        private DevExpress.XtraEditors.TextEdit textBuscare;
+        private DevExpress.XtraEditors.TextEdit txtBuscar;
+        public DevExpress.XtraEditors.SimpleButton btnEliminarModMed;
+        public System.Windows.Forms.DataGridView dataGridElimanrMedico;
+        public System.Windows.Forms.DataGridView dataGridMedico;
     }
 }

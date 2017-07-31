@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MENSAJES;
 using NEGOCIO;
-
+ using DevExpress.XtraEditors;
 namespace ProyectoParcial2
 {
     public partial class Medicos : Form
@@ -21,43 +21,30 @@ namespace ProyectoParcial2
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            //Medico med = new Medico();
-            //med.Cedula = txtCedula.Text;
-            //med.Nombre = txtNombre.Text;
-            //med.Apellido = txtApellido.Text;
-            //med.Fecha = Convert.ToDateTime( dateFechNac.Text);
-            //if (radioBMacu.Capture)
-            //{
-            //    med.Genero = radioBMacu.Text;
-            //}else if(radioBFemenino.Capture)
-            //{
-            //    med.Genero = radioBFemenino.Text;
-            //}
-            //med.EstCivi = comboBEspec.SelectedItem.ToString();
-            //med.Telefono = Convert.ToInt32(txtTelefono.Text);
-            //med.Celular = Convert.ToInt32( txtCelular.Text);
-            //med.Direccion = txtDireccion.Text;
-            //med.LicenMed = txtLicencia.Text;
-            //med.Especialidad=comboBEspec.SelectedItem.ToString();
-         
-
-
-            //var resultado = MedicoNegocio.GuardarPersonaMedicoNegocio(med);
-
+    
         }
 
         private void btnInsertar_Click(object sender, EventArgs e)
+        {
+            if (!Verificar())
+            {
+                return;
+            }
+            guardar();
+        }
+
+        private void guardar()
         {
             MedicoMensaje med = new MedicoMensaje();
             med.Cedula = txtCedula.Text;
             med.Nombre = txtNombre.Text;
             med.Apellido = txtApellidos.Text;
             med.Fecha = Convert.ToDateTime(dateFechaNac.Text);
-            if (radbtnFemenino.Checked==true)
+            if (radbtnFemenino.Checked == true)
             {
                 med.Genero = radbtnFemenino.Text;
             }
-            else if (radbtnMasculino.Checked==true)
+            else if (radbtnMasculino.Checked == true)
             {
                 med.Genero = radbtnMasculino.Text;
             }
@@ -67,33 +54,128 @@ namespace ProyectoParcial2
             med.Celular = Convert.ToInt32(txtCelular.Text);
             med.Direccion = txtDireccion.Text;
             med.LicenMed = txtLicen.Text;
-            med.Especialidad = comboEspe.SelectedItem.ToString();
+            med.Especialidad = comboEspc.SelectedItem.ToString();
 
 
 
             var resultado = PersonaTestNegocio.GuardarMedicoMensaje(med);
-            MessageBox.Show("Se a insertado con exito","INFORMACION");
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-             txtCedula.Text="";
-             txtNombre.Text="";
-             txtApellidos.Text="";
-         
-            comboCivil.Text="";
-             txtTelefono.Text="";
-             txtCelular.Text="";
-             txtDireccion.Text="";
-             txtLicen.Text="";
-             comboEspe.Text="";
-
-
+            limpiar();
+           
         }
+          private void limpiar()
+        {
+            txtCedula.Text = "";
+            txtNombre.Text = "";
+            txtApellidos.Text = "";
+            dateFechaNac.Text = "";
 
+            txtTelefono.Text = "";
+            txtCelular.Text = "";
+            txtDireccion.Text = "";
+            txtLicen.Text = "";
+        }
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            MetodosBasicos.SoloNumerosEnteros(e);
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            MetodosBasicos.SoloLetras(e);
+        }
+
+        private void txtApellidos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            MetodosBasicos.SoloNumerosEnteros(e);
+        }
+
+        private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            MetodosBasicos.SoloLetras(e);
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            MetodosBasicos.SoloNumerosEnteros(e);
+        }
+
+        private void txtCelular_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            MetodosBasicos.SoloNumerosEnteros(e);
+        }
+
+        private void txtLicen_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            MetodosBasicos.SoloNumerosEnteros(e);
+        }
+
+        private bool Verificar()
+        {
+            if (string.IsNullOrEmpty(txtCedula.Text))
+            {
+                dxErrorProvider1.SetError(txtCedula, "Ingrese una Descripcion");
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(txtNombre.Text))
+            {
+                dxErrorProvider1.SetError(txtNombre, "Ingrese sus nombres");
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtApellidos.Text))
+            {
+                dxErrorProvider1.SetError(txtApellidos, "Ingrese sus apellidos");
+                return false;
+            }
+          
+
+            
+      
+            if (string.IsNullOrEmpty(txtDireccion.Text))
+            {
+                dxErrorProvider1.SetError(txtDireccion, "Ingrese su direccion");
+                return false;
+            }
+           
+          
+            if (string.IsNullOrEmpty(dateFechaNac.Text))
+            {
+                dxErrorProvider1.SetError(dateFechaNac, "Selecione su fecha de naciento");
+                return false;
+            }
+            if (comboCivil.SelectedIndex == -1)
+            {
+                dxErrorProvider1.SetError(comboCivil, "Seleccione su estado civil");
+                return false;
+            }
+         
+
+         
+            if (comboEspc.SelectedIndex == -1)
+            {
+                dxErrorProvider1.SetError(comboEspc, "Seleccione Especializacion");
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtLicen.Text))
+            {
+                dxErrorProvider1.SetError(txtLicen, "Ingrese su codigo de licencia");
+                return false;
+            }
+            return true;
+        }
+
+        private void Medicos_Load(object sender, EventArgs e)
+        {
+            MetodosBasicos.CargarBoxEspecialidad(comboEspc);
         }
     }
 }

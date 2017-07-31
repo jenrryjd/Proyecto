@@ -86,5 +86,10 @@ namespace ProyectoParcial2
         {
             this.Hide();
         }
+
+        private void dataGridMedicamentos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

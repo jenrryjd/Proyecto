@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAgregarPac = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnModificarPac = new DevExpress.XtraBars.BarButtonItem();
+            this.btnEliminarPac = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.btnAgrMedicos = new DevExpress.XtraBars.BarButtonItem();
@@ -55,10 +54,7 @@
             this.btnAgregarEsp = new DevExpress.XtraBars.BarButtonItem();
             this.btnModificarEsp = new DevExpress.XtraBars.BarButtonItem();
             this.btnElimnarEsp = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
-            this.btnPacienteModificar = new DevExpress.XtraBars.BarButtonItem();
-            this.btnEliminarPaciente = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSignoVitalInsert = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.Pacientes = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -70,7 +66,13 @@
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.btnCitaporFecha = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCitavariedad = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
@@ -88,10 +90,10 @@
             this.ribbonControl1.ExpandCollapseItem,
             this.barButtonItem1,
             this.barButtonItem2,
-            this.barButtonItem3,
+            this.btnAgregarPac,
             this.barButtonItem4,
-            this.barButtonItem5,
-            this.barButtonItem6,
+            this.btnModificarPac,
+            this.btnEliminarPac,
             this.barButtonItem7,
             this.barButtonItem8,
             this.btnAgrMedicos,
@@ -109,18 +111,19 @@
             this.btnAgregarEsp,
             this.btnModificarEsp,
             this.btnElimnarEsp,
-            this.barButtonItem9,
-            this.barButtonItem10,
-            this.btnPacienteModificar,
-            this.btnEliminarPaciente});
+            this.btnSignoVitalInsert,
+            this.btnCitaporFecha,
+            this.btnCitavariedad});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 35;
+            this.ribbonControl1.MaxItemId = 31;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage2,
             this.Pacientes,
             this.ribbonPage1,
-            this.ribbonPage3});
+            this.ribbonPage3,
+            this.ribbonPage4,
+            this.ribbonPage5});
             this.ribbonControl1.ShowToolbarCustomizeItem = false;
             this.ribbonControl1.Size = new System.Drawing.Size(926, 141);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
@@ -138,45 +141,46 @@
             this.barButtonItem2.Id = 2;
             this.barButtonItem2.Name = "barButtonItem2";
             // 
-            // barButtonItem3
+            // btnAgregarPac
             // 
-            this.barButtonItem3.Caption = "Agregar";
-            this.barButtonItem3.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.Glyph")));
-            this.barButtonItem3.Id = 3;
-            this.barButtonItem3.Name = "barButtonItem3";
-            this.barButtonItem3.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
+            this.btnAgregarPac.Caption = "Agregar";
+            this.btnAgregarPac.Glyph = global::ProyectoParcial2.Properties.Resources._1499379476_PatientFile;
+            this.btnAgregarPac.Id = 3;
+            this.btnAgregarPac.Name = "btnAgregarPac";
+            this.btnAgregarPac.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnAgregarPac.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
             // barButtonItem4
             // 
             this.barButtonItem4.Caption = "Agendar ";
-            this.barButtonItem4.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.Glyph")));
+            this.barButtonItem4.Glyph = global::ProyectoParcial2.Properties.Resources.if_Facebook_UI_41_2344319;
             this.barButtonItem4.Id = 6;
             this.barButtonItem4.Name = "barButtonItem4";
             this.barButtonItem4.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
-            // barButtonItem5
+            // btnModificarPac
             // 
-            this.barButtonItem5.Caption = "Actualizar";
-            this.barButtonItem5.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.Glyph")));
-            this.barButtonItem5.Id = 7;
-            this.barButtonItem5.Name = "barButtonItem5";
-            this.barButtonItem5.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
+            this.btnModificarPac.Caption = "Actualizar";
+            this.btnModificarPac.Glyph = global::ProyectoParcial2.Properties.Resources.edit_user__1_;
+            this.btnModificarPac.Id = 7;
+            this.btnModificarPac.Name = "btnModificarPac";
+            this.btnModificarPac.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnModificarPac.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnModificarPac_ItemClick);
             // 
-            // barButtonItem6
+            // btnEliminarPac
             // 
-            this.barButtonItem6.Caption = "Eliminar";
-            this.barButtonItem6.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.Glyph")));
-            this.barButtonItem6.Id = 8;
-            this.barButtonItem6.Name = "barButtonItem6";
-            this.barButtonItem6.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnEliminarPac.Caption = "Eliminar";
+            this.btnEliminarPac.Glyph = global::ProyectoParcial2.Properties.Resources.if_Artboard_1_1790656;
+            this.btnEliminarPac.Id = 8;
+            this.btnEliminarPac.Name = "btnEliminarPac";
+            this.btnEliminarPac.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnEliminarPac.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEliminarPac_ItemClick);
             // 
             // barButtonItem7
             // 
             this.barButtonItem7.Caption = "Eliminar";
-            this.barButtonItem7.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.Glyph")));
+            this.barButtonItem7.Glyph = global::ProyectoParcial2.Properties.Resources.if_BT_line_remove_905647;
             this.barButtonItem7.Id = 9;
             this.barButtonItem7.Name = "barButtonItem7";
             this.barButtonItem7.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -185,7 +189,7 @@
             // barButtonItem8
             // 
             this.barButtonItem8.Caption = "Modificar";
-            this.barButtonItem8.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.Glyph")));
+            this.barButtonItem8.Glyph = global::ProyectoParcial2.Properties.Resources.if_medical_icon_1_1290990;
             this.barButtonItem8.Id = 10;
             this.barButtonItem8.Name = "barButtonItem8";
             this.barButtonItem8.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -194,7 +198,7 @@
             // btnAgrMedicos
             // 
             this.btnAgrMedicos.Caption = "Agregar";
-            this.btnAgrMedicos.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAgrMedicos.Glyph")));
+            this.btnAgrMedicos.Glyph = global::ProyectoParcial2.Properties.Resources.if_medical_icon_3_1290986;
             this.btnAgrMedicos.Id = 11;
             this.btnAgrMedicos.Name = "btnAgrMedicos";
             this.btnAgrMedicos.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -203,7 +207,7 @@
             // btnModMedico
             // 
             this.btnModMedico.Caption = "Modifcar";
-            this.btnModMedico.Glyph = ((System.Drawing.Image)(resources.GetObject("btnModMedico.Glyph")));
+            this.btnModMedico.Glyph = global::ProyectoParcial2.Properties.Resources.edit_user__1_;
             this.btnModMedico.Id = 12;
             this.btnModMedico.Name = "btnModMedico";
             this.btnModMedico.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -212,7 +216,7 @@
             // btnEliMedico
             // 
             this.btnEliMedico.Caption = "Eliminar";
-            this.btnEliMedico.Glyph = ((System.Drawing.Image)(resources.GetObject("btnEliMedico.Glyph")));
+            this.btnEliMedico.Glyph = global::ProyectoParcial2.Properties.Resources.if_Artboard_1_1790656;
             this.btnEliMedico.Id = 13;
             this.btnEliMedico.Name = "btnEliMedico";
             this.btnEliMedico.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -221,7 +225,7 @@
             // barButtonItem12
             // 
             this.barButtonItem12.Caption = "Agregar";
-            this.barButtonItem12.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.Glyph")));
+            this.barButtonItem12.Glyph = global::ProyectoParcial2.Properties.Resources.if_82Add_create_new_cross_medical_plus_1886149;
             this.barButtonItem12.Id = 14;
             this.barButtonItem12.Name = "barButtonItem12";
             this.barButtonItem12.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -230,7 +234,7 @@
             // barButtonItem13
             // 
             this.barButtonItem13.Caption = "Modificar";
-            this.barButtonItem13.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.Glyph")));
+            this.barButtonItem13.Glyph = global::ProyectoParcial2.Properties.Resources.if_Compose_1891025;
             this.barButtonItem13.Id = 15;
             this.barButtonItem13.Name = "barButtonItem13";
             this.barButtonItem13.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -239,31 +243,34 @@
             // barButtonItem14
             // 
             this.barButtonItem14.Caption = "Eliminar";
-            this.barButtonItem14.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem14.Glyph")));
+            this.barButtonItem14.Glyph = global::ProyectoParcial2.Properties.Resources.if_Artboard_1_17906561;
             this.barButtonItem14.Id = 16;
             this.barButtonItem14.Name = "barButtonItem14";
             this.barButtonItem14.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.barButtonItem14.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem14_ItemClick);
             // 
             // barButtonItem15
             // 
             this.barButtonItem15.Caption = "Agregar";
-            this.barButtonItem15.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem15.Glyph")));
+            this.barButtonItem15.Glyph = global::ProyectoParcial2.Properties.Resources.if_plus_1282963;
             this.barButtonItem15.Id = 17;
             this.barButtonItem15.Name = "barButtonItem15";
             this.barButtonItem15.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.barButtonItem15.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem15_ItemClick);
             // 
             // barButtonItem16
             // 
             this.barButtonItem16.Caption = "Modifcar";
-            this.barButtonItem16.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem16.Glyph")));
+            this.barButtonItem16.Glyph = global::ProyectoParcial2.Properties.Resources.if_pencil_1287517;
             this.barButtonItem16.Id = 18;
             this.barButtonItem16.Name = "barButtonItem16";
             this.barButtonItem16.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.barButtonItem16.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem16_ItemClick);
             // 
             // barButtonItem17
             // 
             this.barButtonItem17.Caption = "Eliminar";
-            this.barButtonItem17.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem17.Glyph")));
+            this.barButtonItem17.Glyph = global::ProyectoParcial2.Properties.Resources.if_Artboard_1_1790656;
             this.barButtonItem17.Id = 19;
             this.barButtonItem17.Name = "barButtonItem17";
             this.barButtonItem17.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -272,31 +279,34 @@
             // barButtonItem18
             // 
             this.barButtonItem18.Caption = "Agregar ";
-            this.barButtonItem18.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem18.Glyph")));
+            this.barButtonItem18.Glyph = global::ProyectoParcial2.Properties.Resources.if_plus_1646001;
             this.barButtonItem18.Id = 20;
             this.barButtonItem18.Name = "barButtonItem18";
             this.barButtonItem18.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.barButtonItem18.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem18_ItemClick);
             // 
             // barButtonItem19
             // 
             this.barButtonItem19.Caption = "Modificar";
-            this.barButtonItem19.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem19.Glyph")));
+            this.barButtonItem19.Glyph = global::ProyectoParcial2.Properties.Resources.if_Change_edit_options_pencil_settings_tools_write_1886543;
             this.barButtonItem19.Id = 21;
             this.barButtonItem19.Name = "barButtonItem19";
             this.barButtonItem19.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.barButtonItem19.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem19_ItemClick);
             // 
             // barButtonItem20
             // 
             this.barButtonItem20.Caption = "Eliminar";
-            this.barButtonItem20.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem20.Glyph")));
+            this.barButtonItem20.Glyph = global::ProyectoParcial2.Properties.Resources.if_Artboard_1_17906561;
             this.barButtonItem20.Id = 22;
             this.barButtonItem20.Name = "barButtonItem20";
             this.barButtonItem20.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.barButtonItem20.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem20_ItemClick);
             // 
             // btnAgregarEsp
             // 
             this.btnAgregarEsp.Caption = "Agregar";
-            this.btnAgregarEsp.Glyph = ((System.Drawing.Image)(resources.GetObject("btnAgregarEsp.Glyph")));
+            this.btnAgregarEsp.Glyph = global::ProyectoParcial2.Properties.Resources.if_icon_42_note_add_315164;
             this.btnAgregarEsp.Id = 23;
             this.btnAgregarEsp.Name = "btnAgregarEsp";
             this.btnAgregarEsp.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -305,7 +315,7 @@
             // btnModificarEsp
             // 
             this.btnModificarEsp.Caption = "Modificar";
-            this.btnModificarEsp.Glyph = ((System.Drawing.Image)(resources.GetObject("btnModificarEsp.Glyph")));
+            this.btnModificarEsp.Glyph = global::ProyectoParcial2.Properties.Resources.if_EditDocument_728933;
             this.btnModificarEsp.Id = 24;
             this.btnModificarEsp.Name = "btnModificarEsp";
             this.btnModificarEsp.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -314,46 +324,20 @@
             // btnElimnarEsp
             // 
             this.btnElimnarEsp.Caption = "Eliminar";
-            this.btnElimnarEsp.Glyph = ((System.Drawing.Image)(resources.GetObject("btnElimnarEsp.Glyph")));
+            this.btnElimnarEsp.Glyph = global::ProyectoParcial2.Properties.Resources.if_BT_line_remove_905647;
             this.btnElimnarEsp.Id = 25;
             this.btnElimnarEsp.Name = "btnElimnarEsp";
             this.btnElimnarEsp.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.btnElimnarEsp.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnElimnarEsp_ItemClick);
             // 
-            // barButtonItem9
+            // btnSignoVitalInsert
             // 
-            this.barButtonItem9.Caption = "Modificar";
-            this.barButtonItem9.Glyph = global::ProyectoParcial2.Properties.Resources.edit_user__1_;
-            this.barButtonItem9.Id = 28;
-            this.barButtonItem9.Name = "barButtonItem9";
-            this.barButtonItem9.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem9_ItemClick_1);
-            // 
-            // barButtonItem10
-            // 
-            this.barButtonItem10.Caption = "Eliminar";
-            this.barButtonItem10.Glyph = global::ProyectoParcial2.Properties.Resources.if_Artboard_1_17906561;
-            this.barButtonItem10.Id = 29;
-            this.barButtonItem10.Name = "barButtonItem10";
-            this.barButtonItem10.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            // 
-            // btnPacienteModificar
-            // 
-            this.btnPacienteModificar.Caption = "Modificar";
-            this.btnPacienteModificar.Glyph = global::ProyectoParcial2.Properties.Resources.edit_user__1_;
-            this.btnPacienteModificar.Id = 30;
-            this.btnPacienteModificar.Name = "btnPacienteModificar";
-            this.btnPacienteModificar.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.btnPacienteModificar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPacienteModificar_ItemClick);
-            // 
-            // btnEliminarPaciente
-            // 
-            this.btnEliminarPaciente.Caption = "Eliminar";
-            this.btnEliminarPaciente.Glyph = global::ProyectoParcial2.Properties.Resources.if_Artboard_1_17906561;
-            this.btnEliminarPaciente.Id = 31;
-            this.btnEliminarPaciente.Name = "btnEliminarPaciente";
-            this.btnEliminarPaciente.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.btnEliminarPaciente.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnEliminarPaciente_ItemClick);
+            this.btnSignoVitalInsert.Caption = "Insertar";
+            this.btnSignoVitalInsert.Glyph = global::ProyectoParcial2.Properties.Resources.if_Facebook_UI_41_2344319;
+            this.btnSignoVitalInsert.Id = 26;
+            this.btnSignoVitalInsert.Name = "btnSignoVitalInsert";
+            this.btnSignoVitalInsert.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnSignoVitalInsert.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSignoVitalInsert_ItemClick);
             // 
             // ribbonPage2
             // 
@@ -379,9 +363,9 @@
             // 
             // ribbonPageGroup1
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem3);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnPacienteModificar);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnEliminarPaciente);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnAgregarPac);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnModificarPac);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnEliminarPac);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Pacientes";
             // 
@@ -442,12 +426,57 @@
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "Medicamentos";
             // 
+            // ribbonPage4
+            // 
+            this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup8});
+            this.ribbonPage4.Name = "ribbonPage4";
+            this.ribbonPage4.Text = "Signo Vitales";
+            // 
+            // ribbonPageGroup8
+            // 
+            this.ribbonPageGroup8.ItemLinks.Add(this.btnSignoVitalInsert);
+            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            this.ribbonPageGroup8.Text = "Signos";
+            // 
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 502);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
             this.ribbonStatusBar1.Size = new System.Drawing.Size(926, 27);
+            // 
+            // ribbonPage5
+            // 
+            this.ribbonPage5.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup9});
+            this.ribbonPage5.Name = "ribbonPage5";
+            this.ribbonPage5.Text = "Reportes";
+            // 
+            // ribbonPageGroup9
+            // 
+            this.ribbonPageGroup9.ItemLinks.Add(this.btnCitaporFecha);
+            this.ribbonPageGroup9.ItemLinks.Add(this.btnCitavariedad);
+            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
+            this.ribbonPageGroup9.Text = "Citas";
+            // 
+            // btnCitaporFecha
+            // 
+            this.btnCitaporFecha.Caption = "Por Fecha";
+            this.btnCitaporFecha.Id = 28;
+            this.btnCitaporFecha.Name = "btnCitaporFecha";
+            this.btnCitaporFecha.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnCitaporFecha.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCitaporFecha_ItemClick);
+            // 
+            // btnCitavariedad
+            // 
+            this.btnCitavariedad.Caption = "Por Estado";
+            this.btnCitavariedad.Id = 29;
+            this.btnCitavariedad.Name = "btnCitavariedad";
+            this.btnCitavariedad.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.btnCitavariedad.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCitavariedad_ItemClick);
             // 
             // MenuPrincipal
             // 
@@ -479,10 +508,10 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem btnAgregarPac;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem6;
+        private DevExpress.XtraBars.BarButtonItem btnModificarPac;
+        private DevExpress.XtraBars.BarButtonItem btnEliminarPac;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
         private DevExpress.XtraBars.BarButtonItem btnAgrMedicos;
@@ -507,9 +536,12 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem10;
-        private DevExpress.XtraBars.BarButtonItem btnPacienteModificar;
-        private DevExpress.XtraBars.BarButtonItem btnEliminarPaciente;
+        private DevExpress.XtraBars.BarButtonItem btnSignoVitalInsert;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
+        private DevExpress.XtraBars.BarButtonItem btnCitaporFecha;
+        private DevExpress.XtraBars.BarButtonItem btnCitavariedad;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
     }
 }

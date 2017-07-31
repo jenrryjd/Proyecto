@@ -14,17 +14,22 @@ namespace MENSAJES
         public string Telefono { get; set; }
        public string Celular { get; set; }
         public string Direccion { get; set; }
+        public DateTime Fecha { get; set; }
+        public string Genero { get; set; }
+
         public PacienteMensaje()
         {
 
         }
-        public PacienteMensaje(string cedula, string nombre, string apellido, string telefono, string celular, string direccion)
+        public PacienteMensaje(string cedula, string nombre, string apellido, string telefono, string celular, string direccion,DateTime fecha,string genero)
         {
             this.Cedula = cedula;
             this.Nombre = nombre;
             this.Apellido = apellido;
             this.Telefono = telefono;
             this.Direccion = direccion;
+            this.Fecha = fecha;
+            this.Genero = genero;
         }
     }
 }
