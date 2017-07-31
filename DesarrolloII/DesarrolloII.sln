@@ -37,4 +37,22 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://jenrryjd.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DAL\\DAL.csproj
+		SccProjectName1 = DAL
+		SccLocalPath1 = DAL
+		SccProjectUniqueName2 = MENSAJES\\MENSAJES.csproj
+		SccProjectName2 = MENSAJES
+		SccLocalPath2 = MENSAJES
+		SccProjectUniqueName3 = NEGOCIO\\NEGOCIO.csproj
+		SccProjectName3 = NEGOCIO
+		SccLocalPath3 = NEGOCIO
+		SccProjectUniqueName4 = ProyectoParcial2\\ProyectoParcial2.csproj
+		SccProjectName4 = ProyectoParcial2
+		SccLocalPath4 = ProyectoParcial2
+	EndGlobalSection
 EndGlobal
