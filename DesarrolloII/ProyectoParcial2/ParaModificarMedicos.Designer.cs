@@ -328,6 +328,7 @@
             this.Controls.Add(this.txtCelula);
             this.Controls.Add(this.label1);
             this.Name = "ParaModificarMedicos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ParaModificarMedicos";
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbEstCi.Properties)).EndInit();

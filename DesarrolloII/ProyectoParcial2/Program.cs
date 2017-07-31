@@ -16,7 +16,7 @@ namespace ProyectoParcial2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuPrincipal());
+            Application.Run(new Login());
         }
     }
 }

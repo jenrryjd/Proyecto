@@ -91,5 +91,10 @@ namespace ProyectoParcial2
              txtLicencia.Text="";
              comboEspecializacion.Text="";
         }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

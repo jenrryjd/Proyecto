@@ -137,5 +137,10 @@ namespace ProyectoParcial2
             dataGridPacientes.DataSource = lista2.Tables[0];
         }
         }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

@@ -195,6 +195,7 @@
             this.Controls.Add(this.textNombre);
             this.Controls.Add(this.textCedula);
             this.Name = "ParaModificarPaciente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ParaModificarPaciente";
             ((System.ComponentModel.ISupportInitialize)(this.textDireccion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textApellido.Properties)).EndInit();

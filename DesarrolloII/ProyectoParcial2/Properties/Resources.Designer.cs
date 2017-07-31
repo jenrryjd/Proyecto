@@ -123,6 +123,16 @@ namespace ProyectoParcial2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap consultacita {
+            get {
+                object obj = ResourceManager.GetObject("consultacita", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap edit_user__1_ {
             get {
                 object obj = ResourceManager.GetObject("edit_user (1)", resourceCulture);
@@ -316,6 +326,26 @@ namespace ProyectoParcial2.Properties {
         internal static System.Drawing.Bitmap Login {
             get {
                 object obj = ResourceManager.GetObject("Login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LoginCancelar {
+            get {
+                object obj = ResourceManager.GetObject("LoginCancelar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LoginIngresar {
+            get {
+                object obj = ResourceManager.GetObject("LoginIngresar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

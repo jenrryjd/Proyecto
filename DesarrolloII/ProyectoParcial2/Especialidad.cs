@@ -198,5 +198,10 @@ namespace ProyectoParcial2
         {
             MetodosBasicos.SoloLetras(e);
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

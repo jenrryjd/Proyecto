@@ -14,13 +14,14 @@ namespace MENSAJES
         public string Hora { get; set; }
         public string FechaCita { get; set; }
         public string Especialidad { get; set; }
+        public string Estado { get; set; }
 
         public CitaMensajes()
         {
 
         }
 
-        public CitaMensajes(int id, string cedPac,string cedDoc, string hora, string fechaCita,string especialista)
+        public CitaMensajes(int id, string cedPac,string cedDoc, string hora, string fechaCita,string especialista,string estado)
         {
             this.Id = id;
             this.CedPac = cedPac;
@@ -28,6 +29,7 @@ namespace MENSAJES
             this.Hora = hora;
             this.FechaCita = fechaCita;
             this.Especialidad = especialista;
+            this.Estado = estado;
         }
     }
 }

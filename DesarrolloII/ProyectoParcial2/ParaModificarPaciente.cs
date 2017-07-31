@@ -90,5 +90,10 @@ namespace ProyectoParcial2
             textTelefono.Text = "";
             textCelular.Text = "";
         }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
